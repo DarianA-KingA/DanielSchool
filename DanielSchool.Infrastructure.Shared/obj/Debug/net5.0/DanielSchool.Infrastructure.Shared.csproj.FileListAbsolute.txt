@@ -1,0 +1,17 @@
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Shared\bin\Debug\net5.0\DanielSchool.Infrastructure.Shared.deps.json
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Shared\bin\Debug\net5.0\DanielSchool.Infrastructure.Shared.dll
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Shared\bin\Debug\net5.0\DanielSchool.Infrastructure.Shared.pdb
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Shared\bin\Debug\net5.0\DanielSchool.Core.Application.dll
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Shared\bin\Debug\net5.0\DanielSchool.Core.Domain.dll
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Shared\bin\Debug\net5.0\DanielSchool.Core.Application.pdb
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Shared\bin\Debug\net5.0\DanielSchool.Core.Domain.pdb
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Shared\obj\Debug\net5.0\DanielSchool.Infrastructure.Shared.csproj.AssemblyReference.cache
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Shared\obj\Debug\net5.0\DanielSchool.Infrastructure.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Shared\obj\Debug\net5.0\DanielSchool.Infrastructure.Shared.AssemblyInfoInputs.cache
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Shared\obj\Debug\net5.0\DanielSchool.Infrastructure.Shared.AssemblyInfo.cs
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Shared\obj\Debug\net5.0\DanielSchool.Infrastructure.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Shared\obj\Debug\net5.0\DanielSchool.Infrastructure.Shared.csproj.CopyComplete
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Shared\obj\Debug\net5.0\DanielSchool.Infrastructure.Shared.dll
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Shared\obj\Debug\net5.0\refint\DanielSchool.Infrastructure.Shared.dll
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Shared\obj\Debug\net5.0\DanielSchool.Infrastructure.Shared.pdb
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Shared\obj\Debug\net5.0\ref\DanielSchool.Infrastructure.Shared.dll

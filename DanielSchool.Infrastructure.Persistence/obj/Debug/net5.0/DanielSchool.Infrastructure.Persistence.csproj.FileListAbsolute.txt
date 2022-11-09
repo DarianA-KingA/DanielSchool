@@ -1,0 +1,17 @@
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Persistence\bin\Debug\net5.0\DanielSchool.Infrastructure.Persistence.deps.json
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Persistence\bin\Debug\net5.0\DanielSchool.Infrastructure.Persistence.dll
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Persistence\bin\Debug\net5.0\DanielSchool.Infrastructure.Persistence.pdb
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Persistence\bin\Debug\net5.0\DanielSchool.Core.Application.dll
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Persistence\bin\Debug\net5.0\DanielSchool.Core.Domain.dll
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Persistence\bin\Debug\net5.0\DanielSchool.Core.Application.pdb
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Persistence\bin\Debug\net5.0\DanielSchool.Core.Domain.pdb
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.csproj.AssemblyReference.cache
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.AssemblyInfoInputs.cache
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.AssemblyInfo.cs
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.csproj.CopyComplete
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.dll
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\refint\DanielSchool.Infrastructure.Persistence.dll
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.pdb
+C:\Users\Darian\Escritorio\PROGRAMAS\C#\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\ref\DanielSchool.Infrastructure.Persistence.dll
