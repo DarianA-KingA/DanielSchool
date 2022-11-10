@@ -13,11 +13,12 @@ namespace DanielSchool.Core.Domain.Entities
         public int Week { get; set; }
         public int Month { get; set; }
         public string Notes { get; set; }
+        public string StudentId { get; set; }
 
         //navigation property
 
-        public Grado NP_grado { get; set; }
 
+        public Grado NP_grado { get; set; }
 
     }
 }

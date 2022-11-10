@@ -1,4 +1,7 @@
+using DanielSchool.Core.Application;
+using DanielSchool.Infrastructure.Identity;
 using DanielSchool.Infrastructure.Persistence;
+using DanielSchool.Infrastructure.Shared;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,7 +28,14 @@ namespace DanielSchool
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSession();
+
             services.AddPersistenceInfrastructure(_config);
+            services.AddIdentityInfrastructure(_config);
+            services.AddApplicationLayer(_config);
+            services.AddSharedInfrastructure(_config);
+
+
             services.AddControllersWithViews();
         }
 

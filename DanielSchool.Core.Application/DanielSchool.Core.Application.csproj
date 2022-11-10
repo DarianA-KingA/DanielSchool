@@ -21,11 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\" />
     <Folder Include="Mappings\" />
     <Folder Include="ViewModels\" />
-    <Folder Include="Helpers\" />
-    <Folder Include="Enums\" />
   </ItemGroup>
 
 </Project>

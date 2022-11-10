@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U6dAnjizDY4/rLk6JdLfyP0ZF8ELgw/WoycdRrjldRFysdfRAU0+r9oe6UWhA8NeagdZKbkpoHLghAy0XjBR9w==",
+  "dgSpecHash": "JPC+AuiF5diybIoTlWSG98ouez6o+mwEuVWbUReXzW7McuFPPMDeu6uersc7SNKFj/qUnkei1KGbIxCpOQvPnA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Darian\\Escritorio\\PROGRAMAS\\C#\\DanielSchool\\DanielSchool.Infrastructure.Persistence\\DanielSchool.Infrastructure.Persistence.csproj",
+  "projectFilePath": "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Infrastructure.Persistence\\DanielSchool.Infrastructure.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Darian\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Darian\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

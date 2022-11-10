@@ -21,8 +21,4 @@
     <ProjectReference Include="..\DanielSchool.Core.Application\DanielSchool.Core.Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Contexts\" />
-  </ItemGroup>
-
 </Project>

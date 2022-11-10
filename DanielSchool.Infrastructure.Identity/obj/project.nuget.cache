@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y7D7daueu3S/wP5yVyZ9g7vzg14A/LZNHvtXsvCK+VLQi5YWPmtYPpQvp8wcrN0jq9zNvYulraZF9XekpYfouA==",
+  "dgSpecHash": "gtzIS9bnuqlVvwqUH0FDSVqvbqi00Vqx0GMNfojzCJ1lh/OFXf08/AD87sYP8PE4l2NGcq35qG4qMdEZ74Ru2g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Darian\\Escritorio\\PROGRAMAS\\C#\\DanielSchool\\DanielSchool.Infrastructure.Identity\\DanielSchool.Infrastructure.Identity.csproj",
+  "projectFilePath": "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Infrastructure.Identity\\DanielSchool.Infrastructure.Identity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Darian\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Darian\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

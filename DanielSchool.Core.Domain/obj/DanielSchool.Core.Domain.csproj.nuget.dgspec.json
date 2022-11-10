@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Darian\\Escritorio\\PROGRAMAS\\C#\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj": {}
+    "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Darian\\Escritorio\\PROGRAMAS\\C#\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj": {
+    "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Darian\\Escritorio\\PROGRAMAS\\C#\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj",
+        "projectUniqueName": "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj",
         "projectName": "DanielSchool.Core.Domain",
-        "projectPath": "C:\\Users\\Darian\\Escritorio\\PROGRAMAS\\C#\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj",
+        "projectPath": "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj",
         "packagesPath": "C:\\Users\\Darian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Darian\\Escritorio\\PROGRAMAS\\C#\\DanielSchool\\DanielSchool.Core.Domain\\obj\\",
+        "outputPath": "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

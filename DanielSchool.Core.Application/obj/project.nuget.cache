@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3jSD9unhXJhXLMYFFTbp5w6fMk4YzwGk2rHKqUqkoPVHsjDmY3iCZ2RAkM0JhqTjEjSaQHpErPR11cSMdtHOQQ==",
+  "dgSpecHash": "/gcTubWhOPPt9R6JCKGXvASDY5CbUwv3lI40j2j0k2LxeMokJ/77lKL73TmQVPJEjMMakvrEkvZvXDYPux7EeQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Darian\\Escritorio\\PROGRAMAS\\C#\\DanielSchool\\DanielSchool.Core.Application\\DanielSchool.Core.Application.csproj",
+  "projectFilePath": "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Application\\DanielSchool.Core.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Darian\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Darian\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
