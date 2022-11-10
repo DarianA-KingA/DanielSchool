@@ -21,4 +21,12 @@
     <ProjectReference Include="..\DanielSchool.Infrastructure.Shared\DanielSchool.Infrastructure.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\img\ProjectImages\General\" />
+    <Folder Include="wwwroot\img\ProjectImages\Noticias\" />
+    <Folder Include="wwwroot\img\ProjectImages\Slides\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
 </Project>
