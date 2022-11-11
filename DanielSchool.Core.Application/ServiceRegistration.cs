@@ -21,13 +21,11 @@ namespace DanielSchool.Core.Application
 
             #region Services
             services.AddTransient(typeof(IGenericService<,>), typeof(GenericService<,,>));
-            /*services.AddTransient<IMejorasPropiedadService, MejorasPropiedadService>();
-            services.AddTransient<IMejorasService, MejorasService>();
-            services.AddTransient<IPropiedadesFavoritasService, PropiedadesFavoritasService>();
-            services.AddTransient<IPropiedadService, PropiedadService>();
-            services.AddTransient<ITipoPropiedadService, TipoPropiedadService>();
-            services.AddTransient<ITipoVentaService, TipoVentaService>();
-            services.AddTransient<IUserService, UserService>();*/
+            services.AddTransient<INoticiaService,NoticiaService>();
+            services.AddTransient<IAsignacionService, AsignacionService>();
+            services.AddTransient<ICalificacionService, CalificacionService>();
+            services.AddTransient<IGradoService, GradoService>();
+            services.AddTransient<IUserService, UserService>();
             #endregion
         }
     }

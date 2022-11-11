@@ -1,4 +1,6 @@
-﻿using DanielSchool.Infrastructure.Persistence.Contexts;
+﻿using DanielSchool.Core.Application.Interfaces.Repositories;
+using DanielSchool.Infrastructure.Persistence.Contexts;
+using DanielSchool.Infrastructure.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,13 +23,11 @@ namespace DanielSchool.Infrastructure.Persistence
             #endregion
 
             #region Repositories
-            /*services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            services.AddTransient<IMejoraRepository, MejoraRepository>();
-            services.AddTransient<IMejorasPropiedadRepository, MejorasPropiedadRepository>();
-            services.AddTransient<IPropiedadesFavoritasRepository, PropiedadesFavoritasRepository>();
-            services.AddTransient<IPropiedadRepository, PropiedadRepository>();
-            services.AddTransient<ITipoPropiedadRepository, TipoPropiedadRepository>();
-            services.AddTransient<ITipoVentaRepository, TipoVentaRepository>();*/
+            services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddTransient<ICalificacionRepository, CalificacionRepository>();
+            services.AddTransient<INoticiaRepository, NoticiaRepository>();
+            services.AddTransient<IGradoRepository, GradoRepository>();
+            services.AddTransient<IAsignacionRepository, AsignacionRepository>();
             #endregion
         }
     }

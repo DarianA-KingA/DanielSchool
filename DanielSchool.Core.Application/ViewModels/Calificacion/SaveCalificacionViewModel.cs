@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DanielSchool.Core.Application.ViewModels.Calificacion
 {
-    public class SaveCalificacionViewModel
+    public class SaveAsignacionionViewModel
     {
         public int GradoId { get; set; }
         public int Week { get; set; }
