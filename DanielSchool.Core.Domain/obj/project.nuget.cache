@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H44ScVym4ZCc+XRKtA0sHghoOI92xm2yGApb60BBnMCTqYExJ7lhq8Q49xRxmRsUuPby5QUux5RJbl+WJI8niw==",
+  "dgSpecHash": "illv/WH8rDFRVuqpykRxIjQmuPKohzoQ8+h0EsrsnHxuZbZWZ8lDkNRNsllCDkVf70/ntj0WFVNUPJex8OCGKw==",
   "success": true,
-  "projectFilePath": "D:\\repository\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj",
+  "projectFilePath": "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

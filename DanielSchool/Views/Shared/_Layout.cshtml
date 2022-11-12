@@ -11,7 +11,7 @@
 
 }
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,7 +30,7 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" asp-area="" asp-controller="@(User!=null ? "Home": "User")" asp-action="Index">DS Tecnology</a>
+                            <a class="nav-link active" asp-area="" asp-controller="@(User==null ? "Home": "User")" asp-action="Index">DS Tecnology</a>
                         </li>
                         @if (User != null)
                         {
@@ -78,7 +78,7 @@
                         }
                         else
                         {
-                            <a class="btn btn-success" asp-controller="User" asp-action="LogIn">Iniciar Sesion</a>
+                            <a class="btn btn-success" asp-controller="User" asp-action="Index">Iniciar Sesion</a>
                         }
                     </div>
                 </div>
@@ -86,7 +86,7 @@
         </nav>
     </header>
     <div class="">
-        <main role="main" class="pb-3">
+        <main role="main" class="">
             @RenderBody()
         </main>
     </div>

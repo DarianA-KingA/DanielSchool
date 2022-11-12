@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DanielSchool.Core.Application.ViewModels.User;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace DanielSchool.Controllers
     {
         public IActionResult Index()
         {
-            return View("Login");
+            return View("Login", new SaveUserViewModel());
         }
     }
 }
