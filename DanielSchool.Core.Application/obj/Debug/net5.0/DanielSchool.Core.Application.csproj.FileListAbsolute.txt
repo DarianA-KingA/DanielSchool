@@ -40,6 +40,6 @@ D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Core.Application\obj\Debug\
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Core.Application\obj\Debug\net5.0\DanielSchool.Core.Application.csproj.CoreCompileInputs.cache
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Core.Application\obj\Debug\net5.0\DanielSchool.Core.Application.csproj.CopyComplete
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Core.Application\obj\Debug\net5.0\DanielSchool.Core.Application.dll
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Core.Application\obj\Debug\net5.0\refint\DanielSchool.Core.Application.dll
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Core.Application\obj\Debug\net5.0\DanielSchool.Core.Application.pdb
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Core.Application\obj\Debug\net5.0\ref\DanielSchool.Core.Application.dll
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Core.Application\obj\Debug\net5.0\refint\DanielSchool.Core.Application.dll

@@ -46,6 +46,6 @@ D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Shared\obj\D
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Shared\obj\Debug\net5.0\DanielSchool.Infrastructure.Shared.csproj.CoreCompileInputs.cache
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Shared\obj\Debug\net5.0\DanielSchool.Infrastructure.Shared.csproj.CopyComplete
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Shared\obj\Debug\net5.0\DanielSchool.Infrastructure.Shared.dll
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Shared\obj\Debug\net5.0\refint\DanielSchool.Infrastructure.Shared.dll
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Shared\obj\Debug\net5.0\DanielSchool.Infrastructure.Shared.pdb
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Shared\obj\Debug\net5.0\ref\DanielSchool.Infrastructure.Shared.dll
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Shared\obj\Debug\net5.0\refint\DanielSchool.Infrastructure.Shared.dll

@@ -52,13 +52,25 @@ namespace DanielSchool.Infrastructure.Persistence.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Comentaries")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ExtraPoints")
+                        .HasColumnType("int");
+
                     b.Property<int>("GradoId")
                         .HasColumnType("int");
 
                     b.Property<int>("Month")
                         .HasColumnType("int");
 
-                    b.Property<string>("Notes")
+                    b.Property<int>("Notes")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ProfesorId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StudentId")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Week")

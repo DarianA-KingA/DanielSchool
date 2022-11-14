@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 
 namespace DanielSchool.Core.Application.Interfaces.Services
 {
-    public interface ICalificacionService : IGenericService<SaveAsignacionionViewModel, CalificacionViewModel>
+    public interface ICalificacionService : IGenericService<SaveCalificacionViewModel, CalificacionViewModel>
     {
+        Task<LoadCalificacionViewModel> GetStudentQualification(string studentId);
+
     }
 }

@@ -54,7 +54,7 @@ D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Identity\obj
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Identity\obj\Debug\net5.0\DanielSchool.Infrastructure.Identity.csproj.CoreCompileInputs.cache
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Identity\obj\Debug\net5.0\DanielSchool.Infrastructure.Identity.csproj.CopyComplete
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Identity\obj\Debug\net5.0\DanielSchool.Infrastructure.Identity.dll
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Identity\obj\Debug\net5.0\refint\DanielSchool.Infrastructure.Identity.dll
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Identity\obj\Debug\net5.0\DanielSchool.Infrastructure.Identity.pdb
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Identity\obj\Debug\net5.0\DanielSchool.Infrastructure.Identity.genruntimeconfig.cache
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Identity\obj\Debug\net5.0\ref\DanielSchool.Infrastructure.Identity.dll
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Identity\obj\Debug\net5.0\refint\DanielSchool.Infrastructure.Identity.dll

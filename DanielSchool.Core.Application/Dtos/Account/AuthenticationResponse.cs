@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DanielSchool.Core.Application.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,5 +16,6 @@ namespace DanielSchool.Core.Application.Dtos.Account
         public bool IsVerified { get; set; }
         public bool HasError { get; set; }
         public string Error { get; set; }
+        public string Action { get; set; } = EnumActionStudent.Index.ToString();
     }
 }

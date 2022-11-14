@@ -15,7 +15,7 @@ namespace DanielSchool.Infrastructure.Identity.Seeds
         {
             ApplicationUser defaultUser = new();
             defaultUser.UserName = "Estudiante_Usuario";
-            defaultUser.Email = "darianking12@aoutlook.com";
+            defaultUser.Email = "estudiante@gmail.com";
             defaultUser.Apellido = "Estudiante apellido";
             defaultUser.Nombre = "Estudiante nombre";
             defaultUser.EmailConfirmed = true;

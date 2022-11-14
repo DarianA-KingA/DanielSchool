@@ -31,6 +31,6 @@ D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Core.Domain\obj\Debug\net5.
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Core.Domain\obj\Debug\net5.0\DanielSchool.Core.Domain.AssemblyInfo.cs
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Core.Domain\obj\Debug\net5.0\DanielSchool.Core.Domain.csproj.CoreCompileInputs.cache
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Core.Domain\obj\Debug\net5.0\DanielSchool.Core.Domain.dll
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Core.Domain\obj\Debug\net5.0\refint\DanielSchool.Core.Domain.dll
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Core.Domain\obj\Debug\net5.0\DanielSchool.Core.Domain.pdb
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Core.Domain\obj\Debug\net5.0\ref\DanielSchool.Core.Domain.dll
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Core.Domain\obj\Debug\net5.0\refint\DanielSchool.Core.Domain.dll
