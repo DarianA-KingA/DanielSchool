@@ -21,25 +21,14 @@ namespace DanielSchool.Core.Application.Services
             _repository = repo;
             _mapper = mapper;
         }
-        public async Task<LoadCalificacionViewModel> GetStudentQualification(string studentId)
+        public async Task<List<CalificacionViewModel>> GetStudentQualification(string studentId)
         {
             var Qualification = await _repository.ObtenerEntidades();
             LoadCalificacionViewModel QualificationFiltred = new LoadCalificacionViewModel();
             var QualificationMapped = _mapper.Map<List<CalificacionViewModel>>(Qualification);
-            var ArrayQualification = QualificationMapped.ToList().Where(x=>x.StudentId == studentId);
-            if (ArrayQualification.Count() > 0)
-            {
-                for (int x = 0; x < 12; x++)
-                {
-                    for (int y = 0; y < 12; y++)
-                    {
-                        QualificationFiltred.Month[x, y] = ArrayQualification.Where(Q => Q.Month == x + 1 && Q.Week == y + 1).ToArray().FirstOrDefault();
-                    }
-                }
-                return QualificationFiltred;
 
-            }
-            return  new LoadCalificacionViewModel();
+
+            return QualificationMapped;
 
             /*QualificationFiltred.Agosto = ArrayQualification.Where(x => x.Month == (int)EnumMonth.Agosto).ToList().FirstOrDefault();
             QualificationFiltred.Septiembre = ArrayQualification.Where(x=>x.Month == (int)EnumMonth.Septiembre).ToList().FirstOrDefault();

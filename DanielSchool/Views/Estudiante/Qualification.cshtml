@@ -1,8 +1,8 @@
 ﻿@using DanielSchool.Core.Application.ViewModels.Calificacion;
-@model LoadCalificacionViewModel;
+@model List<CalificacionViewModel>;
 @{
     ViewData["Title"] = "Student Qualification";
-    string None = "N/A";
+
 }
 <div class="row">
 
@@ -27,30 +27,15 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">Week 1</th>
-                    <td>@if(Model.Month[1,1]!=null){Model.Month[1,1].Notes.ToString();}else{None.ToString();} </td>
-                    <td>@if(Model.Month[1,1]!=null){Model.Month[1,1].ExtraPoints.ToString();}else{None.ToString();}</td>
-                    <td>@if(Model.Month[1,1]!=null){Model.Month[1,1].Comentaries.ToString();}else{None.ToString();}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Week 2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Week 3</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Week 4</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>fat</td>
-                  </tr>
+                    @for (int i = 1; i <= 4; i++)
+                    {
+                        <tr>
+                            <th scope="row">Week @i</th>
+                            <td>  @(Model.Where(m=>m.Month==i && m.Week ==1).Count()>0? Model.Where(m => m.Month == i && m.Week == i).FirstOrDefault().Notes.ToString() : "--")</td>
+                            <td>  @(Model.Where(m=>m.Month==i && m.Week ==1).Count()>0? Model.Where(m => m.Month == i && m.Week == i).FirstOrDefault().ExtraPoints.ToString() : "--")</td>
+                            <td>  @(Model.Where(m=>m.Month==i && m.Week ==1).Count()>0? Model.Where(m => m.Month == i && m.Week == i).FirstOrDefault().Comentaries.ToString() : "--")</td>
+                        </tr>
+                    }
                   <tr>
                     <th scope="row">Agosto</th>
                     <td>Jacob</td>

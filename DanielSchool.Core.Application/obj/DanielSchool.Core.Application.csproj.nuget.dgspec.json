@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Application\\DanielSchool.Core.Application.csproj": {}
+    "D:\\repository\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Application\\DanielSchool.Core.Application.csproj": {}
   },
   "projects": {
-    "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Application\\DanielSchool.Core.Application.csproj": {
+    "D:\\repository\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Application\\DanielSchool.Core.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Application\\DanielSchool.Core.Application.csproj",
+        "projectUniqueName": "D:\\repository\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Application\\DanielSchool.Core.Application.csproj",
         "projectName": "DanielSchool.Core.Application",
-        "projectPath": "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Application\\DanielSchool.Core.Application.csproj",
-        "packagesPath": "C:\\Users\\Darian\\.nuget\\packages\\",
-        "outputPath": "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Application\\obj\\",
+        "projectPath": "D:\\repository\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Application\\DanielSchool.Core.Application.csproj",
+        "packagesPath": "C:\\Users\\daria\\.nuget\\packages\\",
+        "outputPath": "D:\\repository\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Darian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\daria\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,15 +26,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.emzi0767.com/api/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj": {
-                "projectPath": "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj"
+              "D:\\repository\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj": {
+                "projectPath": "D:\\repository\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj"
               }
             }
           }
@@ -101,24 +100,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj": {
+    "D:\\repository\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj",
+        "projectUniqueName": "D:\\repository\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj",
         "projectName": "DanielSchool.Core.Domain",
-        "projectPath": "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj",
-        "packagesPath": "C:\\Users\\Darian\\.nuget\\packages\\",
-        "outputPath": "D:\\repositories\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\obj\\",
+        "projectPath": "D:\\repository\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\DanielSchool.Core.Domain.csproj",
+        "packagesPath": "C:\\Users\\daria\\.nuget\\packages\\",
+        "outputPath": "D:\\repository\\C#\\Asp.net\\DanielSchool\\DanielSchool.Core.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Darian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\daria\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -127,8 +126,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.emzi0767.com/api/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -160,7 +158,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -31,7 +31,7 @@ namespace DanielSchool.Controllers
         {
             userViewModel.Action = EnumActionStudent.Qualification.ToString();
             HttpContext.Session.Set<AuthenticationResponse>("user", userViewModel);
-            LoadCalificacionViewModel vm = await _calificacionService.GetStudentQualification(userViewModel.Id);
+            var vm = await _calificacionService.GetStudentQualification(userViewModel.Id);
             return View(vm);
         }
         public IActionResult Content()

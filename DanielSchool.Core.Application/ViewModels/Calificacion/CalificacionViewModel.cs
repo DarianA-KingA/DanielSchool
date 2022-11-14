@@ -16,6 +16,8 @@ namespace DanielSchool.Core.Application.ViewModels.Calificacion
         public string Comentaries { get; set; }
         public string StudentId { get; set; }
         public string ProfesorId { get; set; }
+        public char Condition { get; set; }
+
     }
-    
+
 }

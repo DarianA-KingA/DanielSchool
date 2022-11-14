@@ -1361,3 +1361,12 @@ D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\refint\Dan
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.pdb
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.genruntimeconfig.cache
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\ref\DanielSchool.dll
+D:\repository\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
+D:\repository\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Estudiante\Asignature.cshtml.g.cs
+D:\repository\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Estudiante\Content.cshtml.g.cs
+D:\repository\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Estudiante\Exam.cshtml.g.cs
+D:\repository\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Estudiante\Index.cshtml.g.cs
+D:\repository\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Estudiante\Practice.cshtml.g.cs
+D:\repository\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Estudiante\Qualification.cshtml.g.cs
+D:\repository\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Profesor\Index.cshtml.g.cs
+D:\repository\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\User\Login.cshtml.g.cs
