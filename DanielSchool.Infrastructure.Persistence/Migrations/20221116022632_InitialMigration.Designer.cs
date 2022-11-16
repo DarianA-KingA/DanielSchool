@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DanielSchool.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20221114031141_ExtraPointAdded")]
-    partial class ExtraPointAdded
+    [Migration("20221116022632_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -102,6 +102,116 @@ namespace DanielSchool.Infrastructure.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Grado");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "4to",
+                            Section = "A"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "4to",
+                            Section = "B"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "5to",
+                            Section = "A"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "5to",
+                            Section = "B"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "6to",
+                            Section = "A"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "6to",
+                            Section = "B"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Name = "7mo",
+                            Section = "A"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Name = "7mo",
+                            Section = "B"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Name = "8vo",
+                            Section = "A"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Name = "8vo",
+                            Section = "B"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Name = "9no",
+                            Section = "A"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Name = "9no",
+                            Section = "B"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Name = "10mo",
+                            Section = "A"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Name = "10mo",
+                            Section = "B"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            Name = "11vo",
+                            Section = "A"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            Name = "11vo",
+                            Section = "B"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            Name = "12vo",
+                            Section = "A"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            Name = "12vo",
+                            Section = "B"
+                        });
                 });
 
             modelBuilder.Entity("DanielSchool.Core.Domain.Entities.Noticia", b =>

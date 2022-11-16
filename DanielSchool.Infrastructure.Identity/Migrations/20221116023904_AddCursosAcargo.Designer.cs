@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DanielSchool.Infrastructure.Identity.Migrations
 {
     [DbContext(typeof(IdentityContext))]
-    [Migration("20221110010407_InitialIdentityMigration")]
-    partial class InitialIdentityMigration
+    [Migration("20221116023904_AddCursosAcargo")]
+    partial class AddCursosAcargo
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -49,6 +49,9 @@ namespace DanielSchool.Infrastructure.Identity.Migrations
 
                     b.Property<int>("GradoId")
                         .HasColumnType("int");
+
+                    b.Property<string>("GradosACargo")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");

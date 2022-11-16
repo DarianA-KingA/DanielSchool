@@ -20,6 +20,7 @@ namespace DanielSchool.Infrastructure.Identity.Seeds
             defaultUser.Nombre = "Profesor nombre";
             defaultUser.EmailConfirmed = true;
             defaultUser.PhoneNumberConfirmed = true;
+            defaultUser.GradosACargo = "4to,5to,6to,7mo,8vo,9no,10mo,11vo,12vo";
 
             if (userManager.Users.All(u => u.Id != defaultUser.Id))
             {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DanielSchool.Core.Application.Enums
 {
-    public enum Grados
+    public enum EnumGrados
     {
          _1ro= 1,
         _2do,
@@ -14,7 +14,7 @@ namespace DanielSchool.Core.Application.Enums
         _4to,
         _5to,
         _6to,
-        _7vo,
+        _7mo,
         _8vo,
         _9no,
         _10mo,

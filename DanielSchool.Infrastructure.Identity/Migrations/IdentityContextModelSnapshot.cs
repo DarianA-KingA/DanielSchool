@@ -48,6 +48,9 @@ namespace DanielSchool.Infrastructure.Identity.Migrations
                     b.Property<int>("GradoId")
                         .HasColumnType("int");
 
+                    b.Property<string>("GradosACargo")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 

@@ -54,6 +54,7 @@ namespace DanielSchool.Infrastructure.Identity.Service
             response.Id = user.Id;
             response.Email = user.Email;
             response.UserName = user.UserName;
+            response.GradosResponsable = user.GradosACargo;
 
             var rolesList = await _userManager.GetRolesAsync(user).ConfigureAwait(false);
 

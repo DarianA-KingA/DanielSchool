@@ -1,8 +1,11 @@
 ﻿using AutoMapper;
+using DanielSchool.Core.Application.Dtos.Account;
+using DanielSchool.Core.Application.Helpers;
 using DanielSchool.Core.Application.Interfaces.Repositories;
 using DanielSchool.Core.Application.Interfaces.Services;
 using DanielSchool.Core.Application.ViewModels.Grado;
 using DanielSchool.Core.Domain.Entities;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,10 +18,37 @@ namespace DanielSchool.Core.Application.Services
     {
         private readonly IGradoRepository _repository;
         private readonly IMapper _mapper;
-        public GradoService(IGradoRepository repo, IMapper mapper) : base(repo, mapper)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly AuthenticationResponse profesor;
+        public GradoService(IGradoRepository repo, IMapper mapper, IHttpContextAccessor httpContextAccessor) : base(repo, mapper)
         {
             _repository = repo;
             _mapper = mapper;
+            _httpContextAccessor = httpContextAccessor;
+            profesor = _httpContextAccessor.HttpContext.Session.Get<AuthenticationResponse>("user");
         }
+        public async Task<List<GradoViewModel>> ObtenerGradoProfesor()
+        {
+            var Grades = await base.ObtenerTodos();
+            if (profesor.GradosResponsable != string.Empty)
+            {
+                List<string> ListaGrados = profesor.GradosResponsable.Split(',').ToList();
+                List<GradoViewModel> FiltredList = new List<GradoViewModel>();
+                foreach (string grado in ListaGrados)
+                {
+                    var comparador = Grades.Where(g => g.Name == grado);
+                    if (comparador.Count() > 0)
+                    {
+                        foreach (var x in comparador)
+                        {
+                            FiltredList.Add(x);
+                        }
+                    }
+                }
+                return FiltredList;
+            }
+            return new List<GradoViewModel>();
+        }
+
     }
 }

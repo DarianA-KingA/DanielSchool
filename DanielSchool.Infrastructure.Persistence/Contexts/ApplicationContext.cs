@@ -1,4 +1,5 @@
-﻿using DanielSchool.Core.Domain.Entities;
+﻿using DanielSchool.Core.Application.Enums;
+using DanielSchool.Core.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -61,6 +62,117 @@ namespace DanielSchool.Infrastructure.Persistence.Contexts
                 .OnDelete(DeleteBehavior.Cascade);
             #endregion
             #region "Configuraciones"
+            #endregion
+            #region "Tablas con datos"
+            modelBuilder.Entity<Grado>().HasData(
+                new Grado { 
+                    Id=1,
+                    Name = EnumGrados._4to.ToString().TrimStart('_'),
+                    Section = 'A'
+                },
+                new Grado
+                {
+                    Id = 2,
+                    Name = EnumGrados._4to.ToString().TrimStart('_'),
+                    Section = 'B'
+                },
+                new Grado
+                {
+                    Id = 3,
+                    Name = EnumGrados._5to.ToString().TrimStart('_'),
+                    Section = 'A'
+                },
+                new Grado
+                {
+                    Id = 4,
+                    Name = EnumGrados._5to.ToString().TrimStart('_'),
+                    Section = 'B'
+                },
+                new Grado
+                {
+                    Id = 5,
+                    Name = EnumGrados._6to.ToString().TrimStart('_'),
+                    Section = 'A'
+                },
+                new Grado
+                {
+                    Id = 6,
+                    Name = EnumGrados._6to.ToString().TrimStart('_'),
+                    Section = 'B'
+                },
+                new Grado
+                {
+                    Id = 7,
+                    Name = EnumGrados._7mo.ToString().TrimStart('_'),
+                    Section = 'A'
+                },
+                new Grado
+                {
+                    Id = 8,
+                    Name = EnumGrados._7mo.ToString().TrimStart('_'),
+                    Section = 'B'
+                },
+                new Grado
+                {
+                    Id = 9,
+                    Name = EnumGrados._8vo.ToString().TrimStart('_'),
+                    Section = 'A'
+                },
+                new Grado
+                {
+                    Id = 10,
+                    Name = EnumGrados._8vo.ToString().TrimStart('_'),
+                    Section = 'B'
+                },
+                new Grado
+                {
+                    Id = 11,
+                    Name = EnumGrados._9no.ToString().TrimStart('_'),
+                    Section = 'A'
+                },
+                new Grado
+                {
+                    Id = 12,
+                    Name = EnumGrados._9no.ToString().TrimStart('_'),
+                    Section = 'B'
+
+                },
+                new Grado
+                {
+                    Id = 13,
+                    Name = EnumGrados._10mo.ToString().TrimStart('_'),
+                    Section = 'A'
+                },
+                new Grado { 
+                    Id=14,
+                    Name = EnumGrados._10mo.ToString().TrimStart('_'),
+                    Section = 'B'
+                },
+                new Grado
+                {
+                    Id = 15,
+                    Name = EnumGrados._11vo.ToString().TrimStart('_'),
+                    Section = 'A'
+                },
+                new Grado
+                {
+                    Id = 16,
+                    Name = EnumGrados._11vo.ToString().TrimStart('_'),
+                    Section = 'B'
+                },
+                new Grado
+                {
+                    Id = 17,
+                    Name = EnumGrados._12vo.ToString().TrimStart('_'),
+                    Section = 'A'
+                },
+                new Grado
+                {
+                    Id = 18,
+                    Name = EnumGrados._12vo.ToString().TrimStart('_'),
+                    Section = 'B'
+                }
+                );
             #endregion
         }
 

@@ -68,7 +68,11 @@ namespace DanielSchool.Infrastructure.Persistence.Migrations
                     GradoId = table.Column<int>(type: "int", nullable: false),
                     Week = table.Column<int>(type: "int", nullable: false),
                     Month = table.Column<int>(type: "int", nullable: false),
-                    Notes = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Notes = table.Column<int>(type: "int", nullable: false),
+                    ExtraPoints = table.Column<int>(type: "int", nullable: false),
+                    Comentaries = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    StudentId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProfesorId = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -79,6 +83,31 @@ namespace DanielSchool.Infrastructure.Persistence.Migrations
                         principalTable: "Grado",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Grado",
+                columns: new[] { "Id", "Name", "Section" },
+                values: new object[,]
+                {
+                    { 1, "4to", "A" },
+                    { 16, "11vo", "B" },
+                    { 15, "11vo", "A" },
+                    { 14, "10mo", "B" },
+                    { 13, "10mo", "A" },
+                    { 12, "9no", "B" },
+                    { 11, "9no", "A" },
+                    { 10, "8vo", "B" },
+                    { 9, "8vo", "A" },
+                    { 8, "7mo", "B" },
+                    { 7, "7mo", "A" },
+                    { 6, "6to", "B" },
+                    { 5, "6to", "A" },
+                    { 4, "5to", "B" },
+                    { 3, "5to", "A" },
+                    { 2, "4to", "B" },
+                    { 17, "12vo", "A" },
+                    { 18, "12vo", "B" }
                 });
 
             migrationBuilder.CreateIndex(

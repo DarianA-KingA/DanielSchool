@@ -9,5 +9,6 @@ namespace DanielSchool.Core.Application.Interfaces.Services
 {
     public interface IGradoService : IGenericService<SaveGradoViewModel, GradoViewModel>
     {
+        Task<List<GradoViewModel>> ObtenerGradoProfesor();
     }
 }
