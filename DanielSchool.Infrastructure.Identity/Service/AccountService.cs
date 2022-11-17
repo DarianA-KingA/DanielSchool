@@ -24,7 +24,34 @@ namespace DanielSchool.Infrastructure.Identity.Service
             _signInManager = signInManager;
             _emailService = emailService;
         }
+        public async Task<List<ListStudent>> GetStudentByGradeId(int idGrade)
+        {
+            var users = _userManager.Users;
+            var subListUsuarios = users.Select(user => new ListStudent
+            {
+                Id = user.Id,
+                Nombre = user.Nombre,
+                Apellido = user.Apellido,
+                GradoId = user.GradoId
 
+                
+            }).ToList();
+            subListUsuarios = subListUsuarios.Where(x=>x.GradoId == idGrade).ToList();
+            List<ListStudent> UserList = new();
+            if (subListUsuarios.Count() > 0)
+            {
+                foreach (var user in subListUsuarios)
+                {
+                    var userVm = await _userManager.FindByIdAsync(user.Id);
+                    var roles = await _userManager.GetRolesAsync(userVm);
+                    user.Roles = roles.ToList();
+                    UserList.Add(user);
+                }
+                return UserList;
+            }
+            return new List<ListStudent>();
+            
+        }
         public async Task<AuthenticationResponse> AuthenticateAsync(AuthenticationRequest request)
         {
             AuthenticationResponse response = new();

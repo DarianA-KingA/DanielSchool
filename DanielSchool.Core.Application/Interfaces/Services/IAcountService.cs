@@ -15,5 +15,6 @@ namespace DanielSchool.Core.Application.Interfaces.Services
         Task<RegisterResponse> RegisterUserAsync(RegisterRequest request, string origin, string rol);
         Task<ResetPasswordResponse> ResetPasswordAsync(ResetPasswordRequest request);
         Task SignOutAsync();
+        Task<List<ListStudent>> GetStudentByGradeId(int idGrade);
     }
 }
