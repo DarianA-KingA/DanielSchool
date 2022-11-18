@@ -1371,3 +1371,4 @@ D:\repository\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\
 D:\repository\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Profesor\Index.cshtml.g.cs
 D:\repository\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\User\Login.cshtml.g.cs
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\bin\Debug\net5.0\DanielSchool.StaticWebAssets.xml
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Profesor\ListStudent.cshtml.g.cs

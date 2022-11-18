@@ -12,5 +12,7 @@ namespace DanielSchool.Core.Application.ViewModels.Grado
         public string Name { get; set; }
 
         public char Section { get; set; }
+        public int CountStudent { get; set; }
+
     }
 }

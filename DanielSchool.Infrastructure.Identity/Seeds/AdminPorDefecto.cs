@@ -30,8 +30,6 @@ namespace DanielSchool.Infrastructure.Identity.Seeds
                 {
                     await userManager.CreateAsync(defaultUser, "123Contra$ena");
                     await userManager.AddToRoleAsync(defaultUser, EnumRoles.Admin.ToString());
-                    await userManager.AddToRoleAsync(defaultUser, EnumRoles.Profesor.ToString());
-                    await userManager.AddToRoleAsync(defaultUser, EnumRoles.Estudiante.ToString());
 
                 }
             }

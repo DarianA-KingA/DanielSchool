@@ -58,5 +58,10 @@ namespace DanielSchool.Core.Application.Services
             var student = await _accountService.GetStudentByGradeId(GradeId);
             return student;
         }
+        public async Task<List<AuthenticationResponse>> GetUsersAsync()
+        {
+            var User = await _accountService.GetUsersAsync();
+            return User;
+        }
     }
 }

@@ -15,5 +15,6 @@ namespace DanielSchool.Core.Application.Dtos.Account
         public int GradoId { get; set; }
 
 
+
     }
 }

@@ -1,6 +1,7 @@
 ﻿
 using DanielSchool.Core.Application.Dtos.Account;
 using DanielSchool.Core.Application.ViewModels.User;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace DanielSchool.Core.Application.Interfaces.Services
@@ -13,5 +14,8 @@ namespace DanielSchool.Core.Application.Interfaces.Services
         Task<RegisterResponse> RegisterAsync(SaveUserViewModel vm, string origin);
         Task<ResetPasswordResponse> ResetPasswordAsync(ResetPasswordViewModel vm);
         Task SignOutAsync();
+        Task<List<ListStudent>> GetStudentByGradeIdAsync(int GradeId);
+
+        Task<List<AuthenticationResponse>> GetUsersAsync();
     }
 }

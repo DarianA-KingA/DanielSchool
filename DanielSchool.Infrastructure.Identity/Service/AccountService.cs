@@ -52,6 +52,31 @@ namespace DanielSchool.Infrastructure.Identity.Service
             return new List<ListStudent>();
             
         }
+        public async Task<List<AuthenticationResponse>> GetUsersAsync()//working
+        {
+            var users = _userManager.Users;
+            var subListUsuarios = users.Select(user => new AuthenticationResponse
+            {
+                Id = user.Id,
+                Nombre= user.Nombre,
+                Apellido = user.Apellido,
+                Email = user.Email,
+                UserName = user.UserName,
+                GradoId= user.GradoId
+            }).ToList();
+
+            List<AuthenticationResponse> UserList = new();
+            foreach (var user in subListUsuarios)
+            {
+                var userVm = await _userManager.FindByIdAsync(user.Id);
+                var roles = await _userManager.GetRolesAsync(userVm);
+                user.Roles = roles.ToList();
+                UserList.Add(user);
+            }
+            //return subListUsuarios;
+            return UserList;
+
+        }
         public async Task<AuthenticationResponse> AuthenticateAsync(AuthenticationRequest request)
         {
             AuthenticationResponse response = new();
