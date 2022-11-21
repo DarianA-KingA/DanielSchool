@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DanielSchool.Core.Domain.Common
+namespace DanielSchool.Core.Application.ViewModels.Common
 {
     public class BaseViewModel
     {

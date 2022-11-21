@@ -2,6 +2,7 @@
 using DanielSchool.Core.Application.Dtos.Account;
 using DanielSchool.Core.Application.ViewModels.Asignacion;
 using DanielSchool.Core.Application.ViewModels.Calificacion;
+using DanielSchool.Core.Application.ViewModels.DescCalificacion;
 using DanielSchool.Core.Application.ViewModels.Grado;
 using DanielSchool.Core.Application.ViewModels.Noticia;
 using DanielSchool.Core.Application.ViewModels.User;
@@ -19,6 +20,10 @@ namespace DanielSchool.Core.Application.Mappings
         public GeneralProfile()
         {
             CreateMap<CalificacionViewModel, Calificacion>()
+                .ReverseMap();
+            CreateMap<LoadCalificacionViewModel, SaveCalificacionViewModel>()
+                .ReverseMap();
+            CreateMap<DescCalificacionViewModel, DescCalificacion>()
                 .ReverseMap();
 
             CreateMap<SaveCalificacionViewModel, Calificacion>()

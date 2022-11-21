@@ -32,7 +32,8 @@ namespace DanielSchool.Infrastructure.Identity.Service
                 Id = user.Id,
                 Nombre = user.Nombre,
                 Apellido = user.Apellido,
-                GradoId = user.GradoId
+                GradoId = user.GradoId,
+                UserName = user.UserName,
 
                 
             }).ToList();

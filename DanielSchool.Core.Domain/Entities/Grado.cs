@@ -15,9 +15,5 @@ namespace DanielSchool.Core.Domain.Entities
         //navigation properties
         public ICollection<Asignacion> NP_asignations { get; set; }
 
-        public ICollection<Calificacion> NP_calificacions { get; set; }
-
-
-
     }
 }

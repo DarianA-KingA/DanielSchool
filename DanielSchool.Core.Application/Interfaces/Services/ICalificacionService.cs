@@ -11,7 +11,8 @@ namespace DanielSchool.Core.Application.Interfaces.Services
 {
     public interface ICalificacionService : IGenericService<SaveCalificacionViewModel, CalificacionViewModel>
     {
-        Task<List<CalificacionViewModel>> GetStudentQualification(string studentId);
+        Task<LoadCalificacionViewModel> GetStudentQualification(string studentId);
+        Task<SaveCalificacionViewModel> GetCalificationForEdit(string studentId);
 
     }
 }

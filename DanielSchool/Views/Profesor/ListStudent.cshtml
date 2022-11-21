@@ -12,7 +12,7 @@
         {
             foreach (var student in Model)
             {
-               <a class="col-xl-3 col-lg-6" style="text-decoration:none;" asp-controller="Profesor" asp-action="EditarNota" asp-route-idStudent="@student.Id" target="#">
+               <a class="col-xl-3 col-lg-6" style="text-decoration:none;" asp-controller="Profesor" asp-action="EditarNota" asp-route-idStudent="@student.UserName">
                     <div class="card l-bg-blue-dark">
                         <div class="card-statistic-3 p-4">
                             <div class="card-icon card-icon-large"><i class="fas fa-users"></i></div>

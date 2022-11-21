@@ -1,4 +1,5 @@
-﻿using DanielSchool.Core.Domain.Common;
+﻿using DanielSchool.Core.Application.ViewModels.Common;
+using DanielSchool.Core.Domain.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;

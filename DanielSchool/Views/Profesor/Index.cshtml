@@ -12,7 +12,7 @@
         {
             @foreach (var Grado in Model)
             {
-                <a class="col-xl-3 col-lg-6" style="text-decoration:none;" asp-controller="Profesor" asp-action="ListStudent" asp-route-idGrade="@Grado.Id" target="_blank">
+                <a class="col-xl-3 col-lg-6" style="text-decoration:none;" asp-controller="Profesor" asp-action="ListStudent" asp-route-idGrade="@Grado.Id">
                     <div class="card l-bg-green-dark">
                         <div class="card-statistic-3 p-4">
                             <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
