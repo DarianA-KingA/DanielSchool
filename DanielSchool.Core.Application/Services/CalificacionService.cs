@@ -22,19 +22,21 @@ namespace DanielSchool.Core.Application.Services
         {
             _repository = repo;
             _mapper = mapper;
-            _descCalificacionService = descCalificacionService;
+            _descCalificacionService = descCalificacionService; 
         }
-        public async Task<LoadCalificacionViewModel> GetStudentQualification(string studentId)
+        public async Task<List<CalificacionViewModel>> GetStudentQualification(string studentId)
         {
-            LoadCalificacionViewModel result = new() { StudentId = studentId};
+
             var ListQualification = await base.ObtenerTodos();
-            
-            var Qualification = ListQualification.Where(q => q.StudentId == studentId).FirstOrDefault();
 
-            var DescCalificacion = await _descCalificacionService.GetDescCalificationByCalificacionIdAsync(Qualification.Id);
-           
+            var Qualification = ListQualification.Where(q => q.StudentId == studentId).ToList();
+            return Qualification;
 
-            var enero = Qualification.Enero.Split(',').ToArray();
+            #region "Codigo comentado"
+            //var DescCalificacion = await _descCalificacionService.GetDescCalificationByCalificacionIdAsync(Qualification.Id);
+
+
+            /*var enero = Qualification.Enero.Split(',').ToArray();
             var febrero = Qualification.Frebrero.Split(',').ToArray();
             var marzo = Qualification.Marzo.Split(',').ToArray();
             var abril = Qualification.Abril.Split(',').ToArray();
@@ -74,13 +76,23 @@ namespace DanielSchool.Core.Application.Services
 
                 }
             }
-            return result;
+            return result;*/
+            #endregion
+
         }
 
-        public async Task<SaveCalificacionViewModel> GetCalificationForEdit(string studentId)
+        public async Task<PreSaveCalificacionViewModel> GetCalificationForEdit(string studentId)
         {
             var result = await GetStudentQualification(studentId);
-            SaveCalificacionViewModel vm = _mapper.Map<SaveCalificacionViewModel>(result);
+            PreSaveCalificacionViewModel vm = new PreSaveCalificacionViewModel();
+            for (int M = 1; M <= 12; M++)
+            {
+                for (int S = 1; S <= 4; S++)
+                {
+                    var x= result.Where(q => q.Week == S && q.Month == M).FirstOrDefault();
+                    vm.Calificacion[S - 1, M - 1] = _mapper.Map<SaveCalificacionViewModel>(x);       
+                }
+            }
             return vm;
 
         }

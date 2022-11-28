@@ -910,6 +910,15 @@ D:\repository\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\
 D:\repository\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Estudiante\Qualification.cshtml.g.cs
 D:\repository\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Profesor\Index.cshtml.g.cs
 D:\repository\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\User\Login.cshtml.g.cs
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.csproj.AssemblyReference.cache
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.GeneratedMSBuildEditorConfig.editorconfig
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.AssemblyInfoInputs.cache
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.AssemblyInfo.cs
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.csproj.CoreCompileInputs.cache
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.MvcApplicationPartsAssemblyInfo.cs
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.MvcApplicationPartsAssemblyInfo.cache
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.RazorAssemblyInfo.cache
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.RazorAssemblyInfo.cs
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\bin\Debug\net5.0\appsettings.Development.json
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\bin\Debug\net5.0\appsettings.json
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\bin\Debug\net5.0\DanielSchool.StaticWebAssets.xml
@@ -1332,15 +1341,6 @@ D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\bin\Debug\net5.0\DanielScho
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\bin\Debug\net5.0\DanielSchool.Infrastructure.Identity.pdb
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\bin\Debug\net5.0\DanielSchool.Infrastructure.Persistence.pdb
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\bin\Debug\net5.0\DanielSchool.Infrastructure.Shared.pdb
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.csproj.AssemblyReference.cache
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.GeneratedMSBuildEditorConfig.editorconfig
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.AssemblyInfoInputs.cache
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.AssemblyInfo.cs
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.csproj.CoreCompileInputs.cache
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.MvcApplicationPartsAssemblyInfo.cs
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.MvcApplicationPartsAssemblyInfo.cache
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.RazorAssemblyInfo.cache
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.RazorAssemblyInfo.cs
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\scopedcss\bundle\DanielSchool.styles.css
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\staticwebassets\DanielSchool.StaticWebAssets.Manifest.cache
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.TagHelpers.input.cache
@@ -1355,6 +1355,7 @@ D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\View
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Estudiante\Qualification.cshtml.g.cs
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Profesor\EditarNota.cshtml.g.cs
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Profesor\Index.cshtml.g.cs
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Profesor\ListStudent.cshtml.g.cs
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
@@ -1372,4 +1373,4 @@ D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\refint\Dan
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.pdb
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\DanielSchool.genruntimeconfig.cache
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\ref\DanielSchool.dll
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Profesor\EditarNota.cshtml.g.cs
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool\obj\Debug\net5.0\Razor\Views\Profesor\Test.cshtml.g.cs

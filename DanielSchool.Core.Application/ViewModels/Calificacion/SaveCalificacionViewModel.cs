@@ -1,6 +1,7 @@
 ﻿using DanielSchool.Core.Application.ViewModels.DescCalificacion;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,19 +10,18 @@ namespace DanielSchool.Core.Application.ViewModels.Calificacion
 {
     public class SaveCalificacionViewModel
     {
-        public DescCalificacionViewModel[,] Month { get; set; } = new DescCalificacionViewModel[4, 12];
-        /*public DescCalificacionViewModel[] Agosto { get; set; }
-        public DescCalificacionViewModel[] Septiembre { get; set; }
-        public DescCalificacionViewModel[] Octubre { get; set; }
-        public DescCalificacionViewModel[] Noviembre { get; set; }
-        public DescCalificacionViewModel[] Diciembre { get; set; }
-        public DescCalificacionViewModel[] Enero { get; set; }
-        public DescCalificacionViewModel[] Frebrero { get; set; }
-        public DescCalificacionViewModel[] Marzo { get; set; }
-        public DescCalificacionViewModel[] Abril { get; set; }
-        public DescCalificacionViewModel[] Mayo { get; set; }
-        public DescCalificacionViewModel[] Junio { get; set; }
-        public DescCalificacionViewModel[] Julio { get; set; }*/
+        public int Id { get; set; }
+        public int Week { get; set; }
+        public int Month { get; set; }
+        [Required(ErrorMessage = "No se aceptan campos vacios, coloque almenos un 0")]
+        [DataType(DataType.Currency)]
+        public int Nota { get; set; }
+        [Required(ErrorMessage = "No se aceptan campos vacios, coloque almenos un 0")]
+        [DataType(DataType.Currency)]
+        public int PuntosExtras { get; set; }
+        [Required(ErrorMessage = "No se aceptan campos vacios, coloque almenos un N/A")]
+        [DataType(DataType.Text)]
+        public string Comentarios { get; set; }
         public string StudentId { get; set; }
         public char Condition { get; set; }
     }

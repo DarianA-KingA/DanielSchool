@@ -21,12 +21,14 @@ namespace DanielSchool.Core.Application.Mappings
         {
             CreateMap<CalificacionViewModel, Calificacion>()
                 .ReverseMap();
-            CreateMap<LoadCalificacionViewModel, SaveCalificacionViewModel>()
+            CreateMap<PreSaveCalificacionViewModel, SaveCalificacionViewModel>()
                 .ReverseMap();
             CreateMap<DescCalificacionViewModel, DescCalificacion>()
                 .ReverseMap();
 
             CreateMap<SaveCalificacionViewModel, Calificacion>()
+                .ReverseMap();
+            CreateMap<SaveCalificacionViewModel, CalificacionViewModel>()
                 .ReverseMap();
 
             CreateMap<AsignacionViewModel, Asignacion>()
