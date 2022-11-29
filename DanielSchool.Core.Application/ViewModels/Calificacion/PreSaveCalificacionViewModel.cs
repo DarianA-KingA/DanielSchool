@@ -10,11 +10,12 @@ namespace DanielSchool.Core.Application.ViewModels.Calificacion
 {
     public class PreSaveCalificacionViewModel
     {
-        public SaveCalificacionViewModel[,] Calificacion { get; set; } = new SaveCalificacionViewModel[4, 12];
+        public SaveCalificacionViewModel[] Calificacion { get; set; }
         public string StudentId { get; set; }
         public char Condition { get; set; }
         public bool HasError { get; set; }
         public string Error { get; set; }
+        public int[,] testing { get; set; }
 
 
     }

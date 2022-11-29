@@ -13,6 +13,7 @@ namespace DanielSchool.Core.Application.Interfaces.Services
     {
         Task<List<CalificacionViewModel>> GetStudentQualification(string studentId);
         Task<PreSaveCalificacionViewModel> GetCalificationForEdit(string studentId);
+        Task EditCalificacion(List<SaveCalificacionViewModel> vm);
 
     }
 }

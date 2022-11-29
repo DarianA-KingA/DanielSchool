@@ -85,16 +85,33 @@ namespace DanielSchool.Core.Application.Services
         {
             var result = await GetStudentQualification(studentId);
             PreSaveCalificacionViewModel vm = new PreSaveCalificacionViewModel();
+            //vm.testing = new int[9];
+            //vm.Calificacion = new SaveCalificacionViewModel[4, 12];
+            vm.Calificacion = new SaveCalificacionViewModel[48];
+            int index = 0;
             for (int M = 1; M <= 12; M++)
             {
                 for (int S = 1; S <= 4; S++)
                 {
                     var x= result.Where(q => q.Week == S && q.Month == M).FirstOrDefault();
-                    vm.Calificacion[S - 1, M - 1] = _mapper.Map<SaveCalificacionViewModel>(x);       
+                    vm.Calificacion[index] = _mapper.Map<SaveCalificacionViewModel>(x);
+                    index++;
                 }
             }
             return vm;
 
+        }
+        public async Task EditCalificacion(List<SaveCalificacionViewModel>vm)
+        {
+            foreach (var Model in vm)
+            {
+                var x = await base.ObtenerPorIdSaveViewModel(Model.Id);
+                x.Nota = Model.Nota;
+                x.PuntosExtras = Model.PuntosExtras;
+                x.Comentarios = Model.Comentarios;
+                await base.Editar(x, x.Id);
+            }
+            
         }
 
     }

@@ -61,28 +61,19 @@ namespace DanielSchool.Controllers
             if (!ModelState.IsValid)
             {
                 var failedVm = await _calificacionService.GetCalificationForEdit(vm.StudentId);
-                failedVm.HasError = true;
-                failedVm.Error = "No se aceptan campos vacios, si no va a cambiar algo no lo borre";
-                return View(new PreSaveCalificacionViewModel() { });
+                return View(failedVm);
             }
-            for (int m = 0; m < 12; m++)
-            {
-                for (int s = 0; s < 12; s++)
-                {
-                    await _calificacionService.Editar(vm.Calificacion[s, m], vm.Calificacion[s, m].Id);
-                }
-            }
+            await _calificacionService.EditCalificacion(vm.Calificacion.ToList());
             var response = await _calificacionService.GetCalificationForEdit(vm.StudentId);
-            return View(vm);
+            return View(response);
         }
         public async Task<IActionResult> Test()
         {
-            var vm = await _gradoService.ObtenerPorIdViewModel(1);
-            return View(vm);
+            return View(new PreSaveCalificacionViewModel() { StudentId = "IdEstudiante"});
 
         }
         [HttpPost]
-        public async Task<IActionResult> Test(GradoViewModel vm)
+        public async Task<IActionResult> Test(PreSaveCalificacionViewModel vm)
         {
             
             return View(vm);
