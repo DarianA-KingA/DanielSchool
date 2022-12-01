@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<link rel="stylesheet" href="@(Url.Content("~/css/CardStyle.css"))"/>
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -14,102 +15,139 @@
         </div>
     </div>
 </div>
-
-<hr class="featurette-divider">
-
-<div class="container" style="margin-top: 30px;">
-    <div class="row">
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="./img/ProjectImages/Noticias/meta.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">hi</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+<section class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center mb-5">
+            <h1 class="display-4" style="color:black;">Proyectos hechos por estudiantes</h1>
+            <p class="lead">
+            </p>
+          </div>
         </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="./img/ProjectImages/Noticias/musk.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Elon Musk despide al 50% de sus empleados</h5>
-                    <p class="card-text">Twitter despide a la mitad de sus empleados mientras Elon Musk asegura que la empresa "pierde US$4 millones por día"</p>
-                    <a href="#" class="btn btn-primary">Ver mas...</a>
-                </div>
-            </div>
+        <div class="row">
+          @for (int i = 0; i <= 3; i++)
+            {
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card text-white card-has-bg click-col" style="background-image: url('https://i.pinimg.com/736x/d6/c8/de/d6c8ded239700fb27c319a7b42eee83c.jpg');">
+                      <img class="card-img d-none" src="https://as1.ftcdn.net/v2/jpg/02/27/03/34/1000_F_227033403_qPnlyTXEOQhtasYi3xxAL4sCJOyA8G8p.jpg" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?"/>
+                      <div class="card-img-overlay d-flex flex-column">
+                        <div class="card-body">
+                          <small class="card-meta mb-2">Thought Leadership</small>
+                          <h4 class="card-title mt-0">
+                            <a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a>
+                          </h4>
+                          <small><i class="far fa-clock"></i> October 15, 2020</small>
+                        </div>
+                        <div class="card-footer">
+                          <div class="media">
+                            <img class="mr-3 rounded-circle"src="https://assets.codepen.io/460692/internal/avatars/users/default.png"alt="Generic placeholder image"style="max-width: 50px"/>
+                            <div class="media-body">
+                              <h6 class="my-0 text-white d-block">Oz Coruhlu</h6>
+                              <small>Director of UI/UX</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            }
         </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="./img/ProjectImages/Noticias/meta.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+      </div>
+    </section>
+	<link rel="stylesheet" href="@(Url.Content("~/css/LongCard.css"))"/>
+    <section class="">
+		<div class="container py-4">
+			<div class="h1 text-center text-dark" id="pageHeaderTitle">News :)</div>
+	
+			<article class="postcard light blue">
+				<a class="postcard__img_link" href="#">
+					<img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
+				</a>
+				<div class="postcard__text t-dark">
+					<h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
+					<div class="postcard__subtitle small">
+						<time datetime="2020-05-25 12:00:00">
+							<i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+						</time>
+					</div>
+					<div class="postcard__bar"></div>
+					<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+					<ul class="postcard__tagbox">
+						<li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+						<li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+						<li class="tag__item play blue">
+							<a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="postcard light red">
+				<a class="postcard__img_link" href="#">
+					<img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />	
+				</a>
+				<div class="postcard__text t-dark">
+					<h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
+					<div class="postcard__subtitle small">
+						<time datetime="2020-05-25 12:00:00">
+							<i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+						</time>
+					</div>
+					<div class="postcard__bar"></div>
+					<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+					<ul class="postcard__tagbox">
+						<li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+						<li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+						<li class="tag__item play red">
+							<a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="postcard light green">
+				<a class="postcard__img_link" href="#">
+					<img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
+				</a>
+				<div class="postcard__text t-dark">
+					<h1 class="postcard__title green"><a href="#">Podcast Title</a></h1>
+					<div class="postcard__subtitle small">
+						<time datetime="2020-05-25 12:00:00">
+							<i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+						</time>
+					</div>
+					<div class="postcard__bar"></div>
+					<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+					<ul class="postcard__tagbox">
+						<li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+						<li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+						<li class="tag__item play green">
+							<a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="postcard light yellow">
+				<a class="postcard__img_link" href="#">
+					<img class="postcard__img" src="https://picsum.photos/501/501" alt="Image Title" />
+				</a>
+				<div class="postcard__text t-dark">
+					<h1 class="postcard__title yellow"><a href="#">Podcast Title</a></h1>
+					<div class="postcard__subtitle small">
+						<time datetime="2020-05-25 12:00:00">
+							<i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+						</time>
+					</div>
+					<div class="postcard__bar"></div>
+					<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+					<ul class="postcard__tagbox">
+						<li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+						<li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+						<li class="tag__item play yellow">
+							<a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+						</li>
+					</ul>
+				</div>
+			</article>
+		</div>
+	</section>
 
-<hr class="featurette-divider">
-
-<div class="row featurette" style="margin-left: 50px;">
-    <div class="col-md-7">
-        <h2 class="featurette-heading">ITLA lanzará primer Metaverso desarrollado en RD con feria de empleo virtual. </h2>
-        <span class="text-muted">La feria se llevará a cabo los días 16 y 17 de noviembre del presente año.</span>
-        <p class="lead" style="text-align: justify;">
-            El Instituto Tecnológico de Las Américas (ITLA) anunció este viernes que lanzará el próximo 16 de noviembre el primer Metaverso desarrollado en República Dominicana.
-
-            Ante este avance, el centro de estudios informó que realizará los días 16 y 17 de noviembre la primera Feria de Empleo en Metaverso denominada “Metaempleo ITLA 2022”, en la que participarán más de 500 empresas nacionales e internacionales que requieren personas capacitadas.
-
-            El centro explicó a través de una nota de prensa que el Metaverso es un universo post realidad, un entorno multiusuario perpetuo y persistente, que fusiona la realidad física con la virtualidad digital. Se basa en la convergencia de tecnologías, como la realidad virtual y la realidad aumentada.
-        </p>
-    </div>
-    <div class="col-md-5">
-        <img src="./img/ProjectImages/Noticias/meta.jpg" alt="..." width="500px" height="400px">
-
-    </div>
-</div>
-
-<hr class="featurette-divider">
-
-<div class="row featurette" style="margin-right: 50px; margin-left: 50px;">
-    <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Conoce la nueva computadora de escritorio de Microsoft de US$ 4.299</h2>
-        <span class="text-muted">DS Tecnology.</span>
-        <p class="lead" style="text-align: justify;">
-            Microsoft nos presentó hoy nuevos productos Surface. Si es un creador, es posible que haya visto Surface Studio en el pasado, solo para sentirse decepcionado, ya que han pasado cuatro años desde la última revisión. Microsoft finalmente solucionó eso con el nuevo Surface Studio 2+.
-
-            El último Surface Studio 2 se lanzó en 2018, hace cuatro años. Todavía tiene hardware capaz, pero un poco viejo para los estándares actuales, incluida la CPU Intel i7-7820HQ de séptima generación y una opción entre una GTX 1060 y una GTX 1070. A pesar de lo que podría sugerir la marca Studio 2+, y el hecho de que no ha cambiado En el exterior, este nuevo dispositivo es una gran mejora con respecto a su predecesor.
-        </p>
-    </div>
-    <div class="col-md-5 order-md-1">
-        <img src="./img/ProjectImages/Noticias/surface.jpg"  alt="..." width="500px" height="400px">
-    </div>
-</div>
-
-<hr class="featurette-divider">
-
-
-<div class="row" style="justify-content: center; margin-left: 200px ;">
-    <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-
-        <h2>Elías Rodríguez</h2>
-        <p>Teacher Tecnology Daniel School</p>
-        <p>Desarrollador de software UNICARIBE</p>
-        <p><a class="btn btn-secondary" href="#">GitHub »</a></p>
-    </div><!-- /.col-lg-4 -->
-
-    <div class="col-lg-4">
-        <img src="./img/ProjectImages/General/darian.jpeg" alt="..." width="140px" height="140px" style="border-radius:50% ;">
-
-        <h2>Darian King</h2>
-        <p>Teacher Tecnology Daniel School</p>
-        <p>Desarrollador de sofware ITLA</p>
-        <p><a class="btn btn-secondary" href="#">GitHub »</a></p>
-    </div><!-- /.col-lg-4 -->
-</div>
 

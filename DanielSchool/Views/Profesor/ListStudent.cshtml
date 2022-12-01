@@ -5,7 +5,7 @@
 }
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
-<link rel="stylesheet" href="~/css/CardStyle.css">
+<link rel="stylesheet" href="~/css/StudentAndClassCard.css">
 <div class="col-md-10 ">
     <div class="row ">
         @if (Model.Count() > 0)
@@ -37,16 +37,5 @@
                 </a>
             }
         }
-        else
-        {
-            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-                    <script>
-                        swal("Opps!", "Somehow this group has not students", "info");
-                    </script>
-                    <div class="d-flex container" style="text-align:center;display:inline-block">
-                        <h4 style="font-family:Arial;">There are not students</h4><img src="https://img.icons8.com/material-outlined/452/search--v1.png" alt="Alternate Text" style="height:50px;width:50px;" />
-                    </div> 
-        }
-
     </div>
 </div>

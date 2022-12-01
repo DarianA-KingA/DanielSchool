@@ -15,322 +15,159 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <title>@ViewData["Title"] - DanielSchool</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="@(Url.Content("./Css/MainSideBar.css"))">
+     <script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <img src="~/img/ProjectImages/Icons/ds.png" alt="" style="width:50px ;">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" asp-area="" asp-controller="@(User==null ? "Home": $"{User.Roles.FirstOrDefault()}")" asp-action="Index">DS Tecnology</a>
-                        </li>
-                        @if (User != null)
-                        {
-                            if (isAdmin)
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="Grades" asp-action="Index">Grades</a>
-                                </li>
+<body id="body-pd">
+	
 
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="Tutorial" asp-action="Index">Tutorials</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="Compiler" asp-action="Index">python compiler DEMO</a>
-                                </li>
-                            }
-                            if(isTeacher)
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="ProfesorController" asp-action="#">Grades</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="ProfesorController" asp-action="#">Tutorials</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="ProfesorController" asp-action="#">python compiler DEMO</a>
-                                </li>
-                            }
-                            if (isStudent)
-                            {
-
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="Tutorial" asp-action="Index">Tutorials</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="Compiler" asp-action="Index">python compiler DEMO</a>
-                                </li>
-                            }
-
-                        }
-                        else
-                        {
-
-                            <li class="nav-item">
-                                <a class="nav-link" asp-controller="Home" asp-action="AboutUs" tabindex="-1" aria-current="true">About Us</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" asp-controller="Home" asp-action="ContactUs">Contat us</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" asp-controller="Tutorial" asp-action="Index">Tutorials</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" asp-controller="Compiler" asp-action="Index">python compiler DEMO</a>
-                            </li>
-                        }
-                            
-                        
-
-                    </ul>
-                    <div class="d-flex">
-                        @if (User != null)
-                        {
-                            <a class="btn btn-danger" asp-controller="User" asp-action="LogOut">Cerrar Sesion</a>
-                        }
-                        else
-                        {
-                            <a class="btn btn-success" asp-controller="User" asp-action="Index">Iniciar Sesion</a>
-                        }
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    
-    <div class="contaier">
-        @if (isStudent)
-        {
-            <div class="row">
-                <div class="col-3" style="margin-bottom:0px; padding-bottom:0px;">
-                <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-
-                    <symbol id="pen" viewBox="0 0 16 16">
-                      <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
-                    </symbol>
-                
-                    <symbol id="book" viewBox="0 0 16 16">
-                      <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-                    </symbol>
-                
-                    <symbol id="sheet" viewBox="0 0 16 16">
-                      <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V9H3V2a1 1 0 0 1 1-1h5.5v2zM3 12v-2h2v2H3zm0 1h2v2H4a1 1 0 0 1-1-1v-1zm3 2v-2h3v2H6zm4 0v-2h3v1a1 1 0 0 1-1 1h-2zm3-3h-3v-2h3v2zm-7 0v-2h3v2H6z"/>
-                    </symbol>
-                    
-                    <symbol id="exams" viewBox="0 0 16 16">
-                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                    </symbol>
-                
-                    <symbol id="news" viewBox="0 0 16 16">
-                        <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
-                    </symbol>  
-                
-                    <symbol id="list" viewBox="0 0 16 16"> 
-                      <path d="M7.646 15.854a.5.5 0 0 0 .708 0L10.207 14H14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.793l1.853 1.854zM1 9V6h14v3H1zm14 1v2a1 1 0 0 1-1 1h-3.793a1 1 0 0 0-.707.293l-1.5 1.5-1.5-1.5A1 1 0 0 0 5.793 13H2a1 1 0 0 1-1-1v-2h14zm0-5H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v2zM2 11.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 0-1h-8a.5.5 0 0 0-.5.5zm0-4a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11a.5.5 0 0 0-.5.5zm0-4a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1h-6a.5.5 0 0 0-.5.5z"/>
-                    </symbol> 
-                
-                </svg>
-                <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px; height: 800px;">
-                    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                      <span class="fs-4">DSBoard</span>
-                    </a>
-                    <hr>
-                    <ul class="nav nav-pills flex-column mb-auto">
-                      <li class="nav-item">
-                        <a asp-controller="Estudiante" asp-action="Qualification" class="nav-link @(User.Action == EnumActionStudent.Qualification.ToString()? "Active":"link-dark")" aria-current="page">
-                          <svg class="bi me-2" width="16" height="16"><use xlink:href="#pen"></use></svg>
-                          Qualifications
-                        </a>
-                      </li>
-                
-                      <li>
-                        <a asp-controller="Estudiante" asp-action="Content" class="nav-link @(User.Action == EnumActionStudent.Content.ToString()? "Active":"link-dark")">
-                          <svg class="bi me-2" width="16" height="16"><use xlink:href="#list"></use></svg>
-                          Content
-                        </a>
-                      </li>
-                
-                      <li>
-                        <a asp-controller="Estudiante" asp-action="Asignature" class="nav-link @(User.Action == EnumActionStudent.Asignature.ToString()? "Active":"link-dark")">
-                          <svg class="bi me-2" width="16" height="16"><use xlink:href="#book"></use></svg>
-                          Asignatures
-                        </a>
-                      </li>
-                      <li>
-                        <a asp-controller="Estudiante" asp-action="Practice" class="nav-link @(User.Action == EnumActionStudent.Practices.ToString()? "Active":"link-dark")">
-                          <svg class="bi me-2" width="16" height="16"><use xlink:href="#sheet"></use></svg>
-                          Practices
-                        </a>
-                      </li>
-                      <li>
-                        <a asp-controller="Estudiante" asp-action="Exam" class="nav-link @(User.Action == EnumActionStudent.Examns.ToString()? "Active":"link-dark")">
-                          <svg class="bi me-2" width="16" height="16"><use xlink:href="#exams"></use></svg>
-                          Exams
-                        </a>
-                      </li>
-                      <li>
-                        <a asp-controller="Home" asp-action="Index" class="nav-link @(User.Action == EnumActionStudent.New.ToString()? "Active":"link-dark")">
-                          <svg class="bi me-2" width="16" height="16"><use xlink:href="#news"></use></svg>
-                          News
-                        </a>
-                      </li>
-                
-                      <img style="border: 1px solid rgb(3, 34, 22); margin-top: 10px; margin-left: 20px; border-radius:50%;" src="/img/ProjectImages/General/StudentIcon.png"  alt="..." width="200px" height="200px">
-                      <div style="margin-top: 30px; text-align: center;">
-                        <h1 style="font-size: 30px;"> Alanna Jamil</h1>
-                        <h1 style="font-size: 30px;"> 6th Basica</h1>
-                      </div>
-                    </ul>
-                </div>
-            </div>
-                <div class="col-9" style="margin-left:0px; padding-left:0px;">
-                <main role="main" class="">
-                    @RenderBody()
-                </main
-            </div>
-            </div>
-            
-        }
-        @if (isAdmin)
-        {
-            <script src="https://cdn.tailwindcss.com"></script>
-            <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-           <div class="col-3">
-               <div class="flex flex-col h-full p-3 w-60 dark:bg-gray-900 dark:text-gray-100">
-	            <div class="space-y-3">
-		            <div class="flex items-center justify-between">
-			            <h2>Dashboard</h2>
-			            <button class="p-2">
-				            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-gray-100">
-					            <rect width="352" height="32" x="80" y="96"></rect>
-					            <rect width="352" height="32" x="80" y="240"></rect>
-					            <rect width="352" height="32" x="80" y="384"></rect>
-				            </svg>
-			            </button>
-		            </div>
-		            <div class="relative">
-			            <span class="absolute inset-y-0 left-0 flex items-center py-4">
-				            <button type="submit" class="p-2 focus:outline-none focus:ring">
-					            <svg fill="currentColor" viewBox="0 0 512 512" class="w-5 h-5 dark:text-gray-400">
-						            <path d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z"></path>
-					            </svg>
-				            </button>
-			            </span>
-			            <input type="search" name="Search" placeholder="Search..." class="w-full py-2 pl-10 text-sm dark:border-transparent rounded-md focus:outline-none dark:bg-gray-800 dark:text-gray-100 focus:dark:bg-gray-900">
-		            </div>
-		            <div class="flex-1">
-			            <ul class="pt-2 pb-4 space-y-1 text-sm">
-				            <li class="rounded-sm">
-					            <a rel="noopener noreferrer" href="#" class="flex items-center p-2 space-x-3 rounded-md">
-						            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-gray-400">
-							            <path d="M469.666,216.45,271.078,33.749a34,34,0,0,0-47.062.98L41.373,217.373,32,226.745V496H208V328h96V496H480V225.958ZM248.038,56.771c.282,0,.108.061-.013.18C247.9,56.832,247.756,56.771,248.038,56.771ZM448,464H336V328a32,32,0,0,0-32-32H208a32,32,0,0,0-32,32V464H64V240L248.038,57.356c.013-.012.014-.023.024-.035L448,240Z"></path>
-						            </svg>
-						            <span>Home</span>
-					            </a>
-				            </li>
-				            <li class="rounded-sm">
-					            <a rel="noopener noreferrer" href="#" class="flex items-center p-2 space-x-3 rounded-md">
-						            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-gray-400">
-							            <path d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z"></path>
-						            </svg>
-						            <span>Search</span>
-					            </a>
-				            </li>
-				            <li class="rounded-sm">
-					            <a rel="noopener noreferrer" href="#" class="flex items-center p-2 space-x-3 rounded-md">
-						            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-gray-400">
-							            <path d="M448.205,392.507c30.519-27.2,47.8-63.455,47.8-101.078,0-39.984-18.718-77.378-52.707-105.3C410.218,158.963,366.432,144,320,144s-90.218,14.963-123.293,42.131C162.718,214.051,144,251.445,144,291.429s18.718,77.378,52.707,105.3c33.075,27.168,76.861,42.13,123.293,42.13,6.187,0,12.412-.273,18.585-.816l10.546,9.141A199.849,199.849,0,0,0,480,496h16V461.943l-4.686-4.685A199.17,199.17,0,0,1,448.205,392.507ZM370.089,423l-21.161-18.341-7.056.865A180.275,180.275,0,0,1,320,406.857c-79.4,0-144-51.781-144-115.428S240.6,176,320,176s144,51.781,144,115.429c0,31.71-15.82,61.314-44.546,83.358l-9.215,7.071,4.252,12.035a231.287,231.287,0,0,0,37.882,67.817A167.839,167.839,0,0,1,370.089,423Z"></path>
-							            <path d="M60.185,317.476a220.491,220.491,0,0,0,34.808-63.023l4.22-11.975-9.207-7.066C62.918,214.626,48,186.728,48,156.857,48,96.833,109.009,48,184,48c55.168,0,102.767,26.43,124.077,64.3,3.957-.192,7.931-.3,11.923-.3q12.027,0,23.834,1.167c-8.235-21.335-22.537-40.811-42.2-56.961C270.072,30.279,228.3,16,184,16S97.928,30.279,66.364,56.206C33.886,82.885,16,118.63,16,156.857c0,35.8,16.352,70.295,45.25,96.243a188.4,188.4,0,0,1-40.563,60.729L16,318.515V352H32a190.643,190.643,0,0,0,85.231-20.125,157.3,157.3,0,0,1-5.071-33.645A158.729,158.729,0,0,1,60.185,317.476Z"></path>
-						            </svg>
-						            <span>Chat</span>
-					            </a>
-				            </li>
-				            <li class="rounded-sm">
-					            <a rel="noopener noreferrer" href="#" class="flex items-center p-2 space-x-3 rounded-md">
-						            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-gray-400">
-							            <path d="M203.247,386.414,208,381.185V355.4L130.125,191H93.875L16,355.4v27.042l4.234,4.595a124.347,124.347,0,0,0,91.224,39.982h.42A124.343,124.343,0,0,0,203.247,386.414ZM176,368.608a90.924,90.924,0,0,1-64.231,26.413h-.33A90.907,90.907,0,0,1,48,369.667V362.6l64-135.112L176,362.6Z"></path>
-							            <path d="M418.125,191h-36.25L304,355.4v27.042l4.234,4.595a124.347,124.347,0,0,0,91.224,39.982h.42a124.343,124.343,0,0,0,91.369-40.607L496,381.185V355.4ZM464,368.608a90.924,90.924,0,0,1-64.231,26.413h-.33A90.907,90.907,0,0,1,336,369.667V362.6l64-135.112L464,362.6Z"></path>
-							            <path d="M272,196.659A56.223,56.223,0,0,0,309.659,159H416V127H309.659a55.991,55.991,0,0,0-107.318,0H96v32H202.341A56.223,56.223,0,0,0,240,196.659V463H136v32H376V463H272ZM232,143a24,24,0,1,1,24,24A24,24,0,0,1,232,143Z"></path>
-						            </svg>
-						            <span>Orders</span>
-					            </a>
-				            </li>
-				            <li class="rounded-sm dark:bg-gray-800 dark:text-gray-50">
-					            <a rel="noopener noreferrer" href="#" class="flex items-center p-2 space-x-3 rounded-md">
-						            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-gray-400">
-							            <path d="M453.122,79.012a128,128,0,0,0-181.087.068l-15.511,15.7L241.142,79.114l-.1-.1a128,128,0,0,0-181.02,0l-6.91,6.91a128,128,0,0,0,0,181.019L235.485,449.314l20.595,21.578.491-.492.533.533L276.4,450.574,460.032,266.94a128.147,128.147,0,0,0,0-181.019ZM437.4,244.313,256.571,425.146,75.738,244.313a96,96,0,0,1,0-135.764l6.911-6.91a96,96,0,0,1,135.713-.051l38.093,38.787,38.274-38.736a96,96,0,0,1,135.765,0l6.91,6.909A96.11,96.11,0,0,1,437.4,244.313Z"></path>
-						            </svg>
-						            <span>Wishlist</span>
-					            </a>
-				            </li>
-				            <li class="rounded-sm">
-					            <a rel="noopener noreferrer" href="#" class="flex items-center p-2 space-x-3 rounded-md">
-						            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-gray-400">
-							            <path d="M245.151,168a88,88,0,1,0,88,88A88.1,88.1,0,0,0,245.151,168Zm0,144a56,56,0,1,1,56-56A56.063,56.063,0,0,1,245.151,312Z"></path>
-							            <path d="M464.7,322.319l-31.77-26.153a193.081,193.081,0,0,0,0-80.332l31.77-26.153a19.941,19.941,0,0,0,4.606-25.439l-32.612-56.483a19.936,19.936,0,0,0-24.337-8.73l-38.561,14.447a192.038,192.038,0,0,0-69.54-40.192L297.49,32.713A19.936,19.936,0,0,0,277.762,16H212.54a19.937,19.937,0,0,0-19.728,16.712L186.05,73.284a192.03,192.03,0,0,0-69.54,40.192L77.945,99.027a19.937,19.937,0,0,0-24.334,8.731L21,164.245a19.94,19.94,0,0,0,4.61,25.438l31.767,26.151a193.081,193.081,0,0,0,0,80.332l-31.77,26.153A19.942,19.942,0,0,0,21,347.758l32.612,56.483a19.937,19.937,0,0,0,24.337,8.73l38.562-14.447a192.03,192.03,0,0,0,69.54,40.192l6.762,40.571A19.937,19.937,0,0,0,212.54,496h65.222a19.936,19.936,0,0,0,19.728-16.712l6.763-40.572a192.038,192.038,0,0,0,69.54-40.192l38.564,14.449a19.938,19.938,0,0,0,24.334-8.731L469.3,347.755A19.939,19.939,0,0,0,464.7,322.319Zm-50.636,57.12-48.109-18.024-7.285,7.334a159.955,159.955,0,0,1-72.625,41.973l-10,2.636L267.6,464h-44.89l-8.442-50.642-10-2.636a159.955,159.955,0,0,1-72.625-41.973l-7.285-7.334L76.241,379.439,53.8,340.562l39.629-32.624-2.7-9.973a160.9,160.9,0,0,1,0-83.93l2.7-9.972L53.8,171.439l22.446-38.878,48.109,18.024,7.285-7.334a159.955,159.955,0,0,1,72.625-41.973l10-2.636L222.706,48H267.6l8.442,50.642,10,2.636a159.955,159.955,0,0,1,72.625,41.973l7.285,7.334,48.109-18.024,22.447,38.877-39.629,32.625,2.7,9.972a160.9,160.9,0,0,1,0,83.93l-2.7,9.973,39.629,32.623Z"></path>
-						            </svg>
-						            <span>Settings</span>
-					            </a>
-				            </li>
-				            <li class="rounded-sm">
-					            <a rel="noopener noreferrer" href="#" class="flex items-center p-2 space-x-3 rounded-md">
-						            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5 fill-current dark:text-gray-400">
-							            <path d="M440,424V88H352V13.005L88,58.522V424H16v32h86.9L352,490.358V120h56V456h88V424ZM320,453.642,120,426.056V85.478L320,51Z"></path>
-							            <rect width="32" height="64" x="256" y="232"></rect>
-						            </svg>
-						            <span>Logout</span>
-					            </a>
-				            </li>
-			            </ul>
-		            </div>
-	            </div>
-	            <div class="flex items-center p-2 mt-12 space-x-4 justify-self-end">
-		            <img src="https://source.unsplash.com/100x100/?portrait" alt="" class="w-12 h-12 rounded-lg dark:bg-gray-500">
-		            <div>
-			            <h2 class="text-lg font-semibold">Leroy Jenkins</h2>
-			            <span class="flex items-center space-x-1">
-				            <a rel="noopener noreferrer" href="#" class="text-xs hover:underline dark:text-gray-400">View profile</a>
-			            </span>
-		            </div>
-	            </div>
-            </div>
-           </div>
-           <div class="col-9">
-               <main role="main" class="">
-                    @RenderBody()
-               </main>
-           </div>
-        }
-        <main role="main" class="">
-            @RenderBody()
-        </main>
-    </div>
-
+    @if(User==null)
+    {
+       <header class="bg-gray-200 mb-2" style="height:80%;">
+				<nav class="relative px-4 py-4 flex justify-between items-center bg-white-500">
+				<a class="text-3xl font-bold leading-none" href="#">
+					<img src="~/img/ProjectImages/Icons/ds.png" class="h-10" alt="logo" viewBox="0 0 10240 10240"/>
+				</a>
+				<div class="lg:hidden">
+					<button class="navbar-burger flex items-center text-blue-600 p-3">
+						<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+							<title>Mobile menu</title>
+							<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+						</svg>
+					</button>
+				</div>
+				<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+					<li><a class="text-sm text-gray-400 hover:text-gray-500" href="#">Home</a></li>
+					<li class="text-gray-300">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+						</svg>
+					</li>
+					<li><a class="text-sm text-blue-600 font-bold" href="#">About Us</a></li>
+					<li class="text-gray-300">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+						</svg>
+					</li>
+					<li><a class="text-sm text-gray-400 hover:text-gray-500" href="#">Services</a></li>
+					<li class="text-gray-300">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+						</svg>
+					</li>
+					<li><a class="text-sm text-gray-400 hover:text-gray-500" href="#">Pricing</a></li>
+					<li class="text-gray-300">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+						</svg>
+					</li>
+					<li><a class="text-sm text-gray-400 hover:text-gray-500" href="#">Contact</a></li>
+				</ul>
+				<!-- <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" href="#">Sign Up</a>-->
+				<a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" asp-controller="User" asp-action="Index">Sign in</a>
+			</nav>
+			<div class="navbar-menu relative z-50 hidden">
+				<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+				<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+					<div class="flex items-center mb-8">
+						<a class="mr-auto text-3xl font-bold leading-none" href="#">
+							<svg class="h-12" alt="logo" viewBox="0 0 10240 10240">
+								<path xmlns="http://www.w3.org/2000/svg" d="M8284 9162 c-2 -207 -55 -427 -161 -667 -147 -333 -404 -644 -733 -886 -81 -59 -247 -169 -256 -169 -3 0 -18 -9 -34 -20 -26 -19 -344 -180 -354 -180 -3 0 -29 -11 -58 -24 -227 -101 -642 -225 -973 -290 -125 -25 -397 -70 -480 -80 -22 -3 -76 -9 -120 -15 -100 -13 -142 -17 -357 -36 -29 -2 -98 -7 -153 -10 -267 -15 -436 -28 -525 -40 -14 -2 -45 -7 -70 -10 -59 -8 -99 -14 -130 -20 -14 -3 -41 -7 -60 -11 -19 -3 -39 -7 -45 -8 -5 -2 -28 -6 -50 -10 -234 -45 -617 -165 -822 -257 -23 -10 -45 -19 -48 -19 -7 0 -284 -138 -340 -170 -631 -355 -1107 -842 -1402 -1432 -159 -320 -251 -633 -308 -1056 -26 -190 -27 -635 -1 -832 3 -19 7 -59 10 -89 4 -30 11 -84 17 -120 6 -36 12 -77 14 -91 7 -43 33 -174 39 -190 3 -8 7 -28 9 -45 6 -35 52 -221 72 -285 7 -25 23 -79 35 -120 29 -99 118 -283 189 -389 67 -103 203 -244 286 -298 75 -49 178 -103 196 -103 16 0 27 16 77 110 124 231 304 529 485 800 82 124 153 227 157 230 3 3 28 36 54 74 116 167 384 497 546 671 148 160 448 450 560 542 14 12 54 45 90 75 88 73 219 172 313 238 42 29 77 57 77 62 0 5 -13 34 -29 66 -69 137 -149 405 -181 602 -7 41 -14 82 -15 90 -1 8 -6 46 -10 83 -3 37 -8 77 -10 88 -2 11 -7 65 -11 122 -3 56 -8 104 -9 107 -2 3 0 12 5 19 6 10 10 8 15 -10 10 -34 167 -346 228 -454 118 -210 319 -515 340 -515 4 0 40 18 80 40 230 128 521 255 787 343 118 40 336 102 395 113 28 5 53 11 105 23 25 5 59 12 75 15 17 3 41 8 55 11 34 7 274 43 335 50 152 18 372 29 565 29 194 0 481 -11 489 -19 2 -3 -3 -6 -12 -6 -9 -1 -20 -2 -24 -3 -33 -8 -73 -16 -98 -21 -61 -10 -264 -56 -390 -90 -649 -170 -1243 -437 -1770 -794 -60 -41 -121 -82 -134 -93 l-24 -18 124 -59 c109 -52 282 -116 404 -149 92 -26 192 -51 220 -55 17 -3 64 -12 105 -21 71 -14 151 -28 230 -41 19 -3 46 -7 60 -10 14 -2 45 -7 70 -10 25 -4 56 -8 70 -10 14 -2 53 -7 88 -10 35 -4 71 -8 81 -10 10 -2 51 -6 92 -9 101 -9 141 -14 147 -21 3 -3 -15 -5 -39 -6 -24 0 -52 -2 -62 -4 -21 -4 -139 -12 -307 -22 -242 -14 -700 -7 -880 13 -41 4 -187 27 -250 39 -125 23 -274 68 -373 111 -43 19 -81 34 -86 34 -4 0 -16 -8 -27 -17 -10 -10 -37 -33 -59 -52 -166 -141 -422 -395 -592 -586 -228 -257 -536 -672 -688 -925 -21 -36 -43 -66 -47 -68 -4 -2 -8 -7 -8 -11 0 -5 -24 -48 -54 -97 -156 -261 -493 -915 -480 -935 2 -3 47 -21 101 -38 54 -18 107 -36 118 -41 58 -25 458 -138 640 -181 118 -27 126 -29 155 -35 14 -2 45 -9 70 -14 66 -15 137 -28 300 -55 37 -7 248 -33 305 -39 28 -3 84 -9 125 -13 163 -16 792 -8 913 12 12 2 58 9 102 15 248 35 423 76 665 157 58 19 134 46 170 60 86 33 344 156 348 166 2 4 8 7 13 7 14 0 205 116 303 184 180 126 287 216 466 396 282 281 511 593 775 1055 43 75 178 347 225 455 100 227 236 602 286 790 59 220 95 364 120 485 6 28 45 245 50 275 2 14 7 41 10 60 3 19 8 49 10 65 2 17 6 46 9 65 15 100 35 262 40 335 3 39 8 89 10 112 22 225 33 803 21 1043 -3 41 -7 129 -11 195 -3 66 -8 136 -10 155 -2 19 -6 76 -10 125 -3 50 -8 101 -10 115 -2 14 -6 57 -10 95 -7 72 -12 113 -20 175 -2 19 -7 55 -10 80 -6 46 -43 295 -51 340 -2 14 -9 54 -15 90 -5 36 -16 97 -24 135 -8 39 -17 84 -20 100 -12 68 -18 97 -50 248 -19 87 -47 204 -61 260 -14 56 -27 109 -29 117 -30 147 -232 810 -253 832 -4 4 -7 -23 -8 -60z"></path>
+							</svg>
+						</a>
+						<button class="navbar-close">
+							<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+							</svg>
+						</button>
+					</div>
+					<div>
+						<ul>
+							<li class="mb-1">
+								<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Home</a>
+							</li>
+							<li class="mb-1">
+								<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">About Us</a>
+							</li>
+							<li class="mb-1">
+								<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Services</a>
+							</li>
+							<li class="mb-1">
+								<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Pricing</a>
+							</li>
+							<li class="mb-1">
+								<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Contact</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mt-auto">
+						<div class="pt-6">
+							<!--<a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl" href="#">Sign in</a> -->
+							<a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"asp-controller="User" asp-action="Index">Sign In</a>
+						</div>
+						<p class="my-4 text-xs text-center text-gray-400">
+							<span>Copyright © 2021</span>
+						</p>
+					</div>
+				</nav>
+			</header>
+			<div class="container">
+				<main role="main" class="">
+					@RenderBody()
+				</main>
+			</div> 
+    }
+    else
+    {
+		<div>
+			<header class="header" id="header">
+				<div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+				<div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
+			</header>
+			<div class="l-navbar" id="nav-bar">
+				<nav class="nav">
+					<div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">BBBootstrap</span> </a>
+						<div class="nav_list"> 
+							<a href="#" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span></a> 
+							<a asp-controller="Estudiante"asp-action="Qualification" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Users</span> </a> 
+							<a href="#" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Messages</span> </a>
+							<a href="#" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">Bookmark</span> </a>
+							<a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Files</span> </a> 
+							<a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a> 
+						</div>
+					</div> 
+					<a asp-controller="User" Asp-action="LogOut" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+				</nav>
+			</div>
+		</div>
+        <!--Container Main start-->
+        <div class="height-100 bg-light">
+            <div class="container">
+				    <main role="main" class="">
+					    @RenderBody()
+				    </main>
+	        </div>
+        </div>
+        <!--Container Main end-->
+    }
     <footer class="border-top footer text-muted">
         <div class="container" style="height:0px">
             &copy; 2022 - DanielSchool
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/js/NavbarFuntion.js" asp-append-version="true"></script>
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+    
 </body>
+
 </html>
