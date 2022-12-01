@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Incio de sesion";
 }
-
+<link rel="stylesheet" src="@(Url.Content("~/css/Login.css"))"/>
 <section class="" style="margin-top:60px ">
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -56,27 +56,6 @@
         </div>
       </div>
     </div>
-    <style>
-
-        .divider:after,
-        .divider:before {
-            content: "";
-            flex: 1;
-            height: 1px;
-            background: #eee;
-        }
-
-        .h-custom {
-            height: calc(100% - 73px);
-        }
-
-        @@media (max-width: 450px) {
-            .h-custom {
-                height: 100%;
-            }
-        }
-
-    </style>
   </section>
 
 
