@@ -26,9 +26,8 @@
                       <table class="table table-bordered">
                         <thead>
                       <tr>
-                        <th scope="col">Weeks</th>
+                        <th scope="col">Metas</th>
                         <th scope="col">Qualifications</th>
-                        <th scope="col">Extra points</th>
                         <th scope="col">Comment</th>
                       </tr>
                     </thead>
@@ -37,9 +36,8 @@
                         {
                             var Qualification =  Model.Where(q=>q.Month == M && q.Week == s).FirstOrDefault();
                             <tr>
-                                    <th scope="row">Week @(s)</th>
+                                    <th scope="row">@Qualification.Meta</th>
                                     <td>@Qualification.Nota</td>
-                                    <td>@Qualification.PuntosExtras</td>
                                     <td>@Qualification.Comentarios</td>
                             </tr>
                         }

@@ -6,6 +6,7 @@ using DanielSchool.Core.Application.ViewModels.Calificacion;
 using DanielSchool.Core.Application.ViewModels.Grado;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -49,10 +50,19 @@ namespace DanielSchool.Controllers
         }
         public async Task<IActionResult> EditarNota(string idStudent)
         {
-            userViewModel.Action = EnumActionStudent.Qualification.ToString();
-            HttpContext.Session.Set<AuthenticationResponse>("user", userViewModel);
-            var vm = await _calificacionService.GetCalificationForEdit(idStudent);
-            return View(vm);
+            try
+            {
+                userViewModel.Action = EnumActionStudent.Qualification.ToString();
+                HttpContext.Session.Set<AuthenticationResponse>("user", userViewModel);
+                var vm = await _calificacionService.GetCalificationForEdit(idStudent);
+                return View(vm);
+            }
+            catch (NullReferenceException)
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+
+            }
+
 
         }
         [HttpPost]

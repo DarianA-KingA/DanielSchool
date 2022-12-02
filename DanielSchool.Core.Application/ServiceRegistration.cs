@@ -26,7 +26,6 @@ namespace DanielSchool.Core.Application
             services.AddTransient<ICalificacionService, CalificacionService>();
             services.AddTransient<IGradoService, GradoService>();
             services.AddTransient<IUserService, UserService>();
-            services.AddTransient<IDescCalificacionService, DescCalificacionService>();
 
             #endregion
         }

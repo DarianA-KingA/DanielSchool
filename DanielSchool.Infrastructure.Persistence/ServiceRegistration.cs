@@ -28,7 +28,6 @@ namespace DanielSchool.Infrastructure.Persistence
             services.AddTransient<INoticiaRepository, NoticiaRepository>();
             services.AddTransient<IGradoRepository, GradoRepository>();
             services.AddTransient<IAsignacionRepository, AsignacionRepository>();
-            services.AddTransient<IDescCalificacionRepository, DescCalificacionRepository>();
 
             #endregion
         }

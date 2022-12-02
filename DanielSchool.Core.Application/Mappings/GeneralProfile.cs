@@ -23,8 +23,6 @@ namespace DanielSchool.Core.Application.Mappings
                 .ReverseMap();
             CreateMap<PreSaveCalificacionViewModel, SaveCalificacionViewModel>()
                 .ReverseMap();
-            CreateMap<DescCalificacionViewModel, DescCalificacion>()
-                .ReverseMap();
 
             CreateMap<SaveCalificacionViewModel, Calificacion>()
                 .ReverseMap();

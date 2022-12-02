@@ -79,16 +79,16 @@ namespace DanielSchool.Infrastructure.Persistence.Migrations
                     b.Property<string>("LastModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Meta")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Month")
                         .HasColumnType("int");
 
-                    b.Property<int>("Nota")
-                        .HasColumnType("int");
+                    b.Property<string>("Nota")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PuntosExtras")
-                        .HasColumnType("int");
-
-                    b.Property<string>("StudentId")
+                    b.Property<string>("StudentUserName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Week")
@@ -102,615 +102,579 @@ namespace DanielSchool.Infrastructure.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 1,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 1
                         },
                         new
                         {
                             Id = 2,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 1,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 2
                         },
                         new
                         {
                             Id = 3,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 1,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 3
                         },
                         new
                         {
                             Id = 4,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 1,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 4
                         },
                         new
                         {
                             Id = 5,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 2,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 1
                         },
                         new
                         {
                             Id = 6,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 2,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 2
                         },
                         new
                         {
                             Id = 7,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 2,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 3
                         },
                         new
                         {
                             Id = 8,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 2,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 4
                         },
                         new
                         {
                             Id = 9,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 3,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 1
                         },
                         new
                         {
                             Id = 10,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 3,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 2
                         },
                         new
                         {
                             Id = 11,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 3,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 3
                         },
                         new
                         {
                             Id = 12,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 3,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 4
                         },
                         new
                         {
                             Id = 13,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 4,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 1
                         },
                         new
                         {
                             Id = 14,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 4,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 2
                         },
                         new
                         {
                             Id = 15,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 4,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 3
                         },
                         new
                         {
                             Id = 16,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 4,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 4
                         },
                         new
                         {
                             Id = 17,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Declarar varibales",
                             Month = 5,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 1
                         },
                         new
                         {
                             Id = 18,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Diagrama de flujo",
                             Month = 5,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 2
                         },
                         new
                         {
                             Id = 19,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Condicional \"if\"",
                             Month = 5,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 3
                         },
                         new
                         {
                             Id = 20,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Bubcle \"while\"",
                             Month = 5,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 4
                         },
                         new
                         {
                             Id = 21,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 6,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 1
                         },
                         new
                         {
                             Id = 22,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 6,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 2
                         },
                         new
                         {
                             Id = 23,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 6,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 3
                         },
                         new
                         {
                             Id = 24,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 6,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 4
                         },
                         new
                         {
                             Id = 25,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 7,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 1
                         },
                         new
                         {
                             Id = 26,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 7,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 2
                         },
                         new
                         {
                             Id = 27,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 7,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 3
                         },
                         new
                         {
                             Id = 28,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 7,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 4
                         },
                         new
                         {
                             Id = 29,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 8,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 1
                         },
                         new
                         {
                             Id = 30,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 8,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 2
                         },
                         new
                         {
                             Id = 31,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 8,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 3
                         },
                         new
                         {
                             Id = 32,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 8,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 4
                         },
                         new
                         {
                             Id = 33,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 9,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 1
                         },
                         new
                         {
                             Id = 34,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 9,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 2
                         },
                         new
                         {
                             Id = 35,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 9,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 3
                         },
                         new
                         {
                             Id = 36,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 9,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 4
                         },
                         new
                         {
                             Id = 37,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 10,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 1
                         },
                         new
                         {
                             Id = 38,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 10,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 2
                         },
                         new
                         {
                             Id = 39,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 10,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 3
                         },
                         new
                         {
                             Id = 40,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 10,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 4
                         },
                         new
                         {
                             Id = 41,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 11,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 1
                         },
                         new
                         {
                             Id = 42,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 11,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 2
                         },
                         new
                         {
                             Id = 43,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 11,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 3
                         },
                         new
                         {
                             Id = 44,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 11,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 4
                         },
                         new
                         {
                             Id = 45,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 12,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 1
                         },
                         new
                         {
                             Id = 46,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 12,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 2
                         },
                         new
                         {
                             Id = 47,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 12,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 3
                         },
                         new
                         {
                             Id = 48,
-                            Comentarios = " N/A",
-                            Created = new DateTime(2022, 11, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            Comentarios = "N/A",
+                            Created = new DateTime(2022, 12, 2, 0, 0, 0, 0, DateTimeKind.Local),
                             CreatedBy = "Admin",
+                            Meta = "Default",
                             Month = 12,
-                            Nota = 100,
-                            PuntosExtras = 0,
-                            StudentId = "Estudiante_Usuario",
+                            Nota = "Iniciado",
+                            StudentUserName = "Estudiante_Usuario",
                             Week = 4
                         });
-                });
-
-            modelBuilder.Entity("DanielSchool.Core.Domain.Entities.DescCalificacion", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Comentarios")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("IdCalification")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("LastModified")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("LastModifiedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Nota")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PuntosExtras")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("DescCalificacion");
                 });
 
             modelBuilder.Entity("DanielSchool.Core.Domain.Entities.Grado", b =>

@@ -16,20 +16,18 @@ namespace DanielSchool.Core.Application.Services
     public class CalificacionService : GenericService<SaveCalificacionViewModel, CalificacionViewModel, Calificacion>, ICalificacionService
     {
         private readonly ICalificacionRepository _repository;
-        private readonly IDescCalificacionService _descCalificacionService;
         private readonly IMapper _mapper;
-        public CalificacionService(ICalificacionRepository repo, IMapper mapper, IDescCalificacionService descCalificacionService) : base(repo, mapper)
+        public CalificacionService(ICalificacionRepository repo, IMapper mapper) : base(repo, mapper)
         {
             _repository = repo;
             _mapper = mapper;
-            _descCalificacionService = descCalificacionService; 
         }
-        public async Task<List<CalificacionViewModel>> GetStudentQualification(string studentId)
+        public async Task<List<CalificacionViewModel>> GetStudentQualification(string studentUserName)
         {
 
             var ListQualification = await base.ObtenerTodos();
 
-            var Qualification = ListQualification.Where(q => q.StudentId == studentId).ToList();
+            var Qualification = ListQualification.Where(q => q.StudentUserName == studentUserName).ToList();
             return Qualification;
 
             #region "Codigo comentado"
@@ -107,7 +105,6 @@ namespace DanielSchool.Core.Application.Services
             {
                 var x = await base.ObtenerPorIdSaveViewModel(Model.Id);
                 x.Nota = Model.Nota;
-                x.PuntosExtras = Model.PuntosExtras;
                 x.Comentarios = Model.Comentarios;
                 await base.Editar(x, x.Id);
             }

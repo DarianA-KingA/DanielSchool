@@ -10,12 +10,12 @@ namespace DanielSchool.Core.Application.ViewModels.Calificacion
 {
     public class CalificacionViewModel : BaseViewModel
     {
+        public string Meta { get; set; }
         public int Week { get; set; }
         public int Month { get; set; }
-        public int Nota { get; set; }
-        public int PuntosExtras { get; set; }
+        public string Nota { get; set; }
         public string Comentarios { get; set; }
-        public string StudentId { get; set; }
+        public string StudentUserName { get; set; }
 
     }
 

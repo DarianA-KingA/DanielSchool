@@ -29,7 +29,6 @@
                       <tr>
                         <th scope="col">Weeks</th>
                         <th scope="col">Qualifications</th>
-                        <th scope="col">Extra points</th>
                         <th scope="col">Comment</th>
                       </tr>
                     </thead>
@@ -38,12 +37,11 @@
                         {
 
                             <tr>
-                                    <th scope="row">Week @(s)</th>
+                                    <th scope="row"><input asp-for="Calificacion[index].Meta"/> </th>
                                     <td><input asp-for="Calificacion[index].Nota"/></td>
-                                    <td><input asp-for="Calificacion[index].PuntosExtras"/></td>
                                     <td><input asp-for="Calificacion[index].Comentarios"/></td>
                                     <input type="hidden" asp-for="Calificacion[index].Id"/>
-                                    
+     
                             </tr>
                             index++;
                         }

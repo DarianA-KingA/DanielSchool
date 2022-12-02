@@ -5,6 +5,7 @@ using DanielSchool.Core.Application.Interfaces.Services;
 using DanielSchool.Core.Application.ViewModels.Calificacion;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Threading.Tasks;
 
 namespace DanielSchool.Controllers
@@ -29,10 +30,18 @@ namespace DanielSchool.Controllers
         }
         public async Task<IActionResult> Qualification()
         {
-            userViewModel.Action = EnumActionStudent.Qualification.ToString();
-            HttpContext.Session.Set<AuthenticationResponse>("user", userViewModel);
-            var vm = await _calificacionService.GetStudentQualification(userViewModel.UserName);
-            return View(vm);
+            try
+            {
+                userViewModel.Action = EnumActionStudent.Qualification.ToString();
+                HttpContext.Session.Set<AuthenticationResponse>("user", userViewModel);
+                var vm = await _calificacionService.GetStudentQualification(userViewModel.UserName);
+                return View(vm);
+            }
+            catch (NullReferenceException)
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+
+            }
         }
         public IActionResult Content()
         {

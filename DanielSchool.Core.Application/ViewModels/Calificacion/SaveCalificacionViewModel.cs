@@ -11,18 +11,13 @@ namespace DanielSchool.Core.Application.ViewModels.Calificacion
     public class SaveCalificacionViewModel
     {
         public int Id { get; set; }
+        [Required(ErrorMessage = "No se aceptan campos vacios, coloque almenos un 0")]
+        [DataType(DataType.Text)]
+        public string Meta { get; set; }
         public int Week { get; set; }
         public int Month { get; set; }
-        [Required(ErrorMessage = "No se aceptan campos vacios, coloque almenos un 0")]
-        [DataType(DataType.Currency)]
-        public int Nota { get; set; }
-        [Required(ErrorMessage = "No se aceptan campos vacios, coloque almenos un 0")]
-        [DataType(DataType.Currency)]
-        public int PuntosExtras { get; set; }
-        [Required(ErrorMessage = "No se aceptan campos vacios, coloque almenos un N/A")]
-        [DataType(DataType.Text)]
+        public string Nota { get; set; }
         public string Comentarios { get; set; }
-        public string StudentId { get; set; }
-        public char Condition { get; set; }
+        public string StudentUserName { get; set; }
     }
 }
