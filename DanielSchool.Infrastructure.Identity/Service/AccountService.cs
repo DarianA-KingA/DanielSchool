@@ -34,7 +34,7 @@ namespace DanielSchool.Infrastructure.Identity.Service
                 Apellido = user.Apellido,
                 GradoId = user.GradoId,
                 UserName = user.UserName,
-
+                Section = user.Seccion
                 
             }).ToList();
             subListUsuarios = subListUsuarios.Where(x=>x.GradoId == idGrade).ToList();

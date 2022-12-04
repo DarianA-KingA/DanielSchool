@@ -32,18 +32,11 @@ namespace DanielSchool.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var vm = await _gradoService.ObtenerGradoProfesor();
-            var Users = await _userService.GetUsersAsync();
-            List<GradoViewModel> NewList = new();
-            foreach (var x in vm)
-            {
-                x.CountStudent = Users.Where(u => u.GradoId == x.Id).Count();
-                NewList.Add(x);
-            }
-            return View(NewList);
+            return View();
         }
         public async Task<IActionResult> ListStudent(int idGrade)
         {
+
             var vm = await _userService.GetStudentByGradeIdAsync(idGrade);
 
             return View(vm);
@@ -77,16 +70,10 @@ namespace DanielSchool.Controllers
             var response = await _calificacionService.GetCalificationForEdit(vm.StudentId);
             return View(response);
         }
-        public async Task<IActionResult> Test()
+        public IActionResult Test()
         {
-            return View(new PreSaveCalificacionViewModel() { StudentId = "IdEstudiante"});
+            return View();
 
-        }
-        [HttpPost]
-        public async Task<IActionResult> Test(PreSaveCalificacionViewModel vm)
-        {
-            
-            return View(vm);
         }
     }
 }

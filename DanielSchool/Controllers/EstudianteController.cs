@@ -1,4 +1,5 @@
 ﻿using DanielSchool.Core.Application.Dtos.Account;
+using DanielSchool.Core.Application.Dtos.Qualification;
 using DanielSchool.Core.Application.Enums;
 using DanielSchool.Core.Application.Helpers;
 using DanielSchool.Core.Application.Interfaces.Services;
@@ -6,6 +7,8 @@ using DanielSchool.Core.Application.ViewModels.Calificacion;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace DanielSchool.Controllers
@@ -32,9 +35,11 @@ namespace DanielSchool.Controllers
         {
             try
             {
+                var vm = new PostCalificationViewModel();
                 userViewModel.Action = EnumActionStudent.Qualification.ToString();
                 HttpContext.Session.Set<AuthenticationResponse>("user", userViewModel);
-                var vm = await _calificacionService.GetStudentQualification(userViewModel.UserName);
+                vm.Calificacion = await _calificacionService.GetStudentQualification(userViewModel.UserName);
+                vm.limite = QualificationFilter.QualificacionFiilterMehtod();
                 return View(vm);
             }
             catch (NullReferenceException)

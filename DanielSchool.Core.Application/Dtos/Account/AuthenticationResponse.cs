@@ -1,4 +1,5 @@
 ﻿using DanielSchool.Core.Application.Enums;
+using DanielSchool.Core.Application.ViewModels.Grado;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,5 +22,7 @@ namespace DanielSchool.Core.Application.Dtos.Account
         public string Error { get; set; }
         public string Action { get; set; } = EnumActionStudent.Index.ToString();
         public string GradosResponsable { get; set; }
+
+        public List<GradoViewModel>GradosList { get; set; }
     }
 }

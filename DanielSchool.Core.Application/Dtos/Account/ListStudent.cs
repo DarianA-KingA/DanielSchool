@@ -14,6 +14,7 @@ namespace DanielSchool.Core.Application.Dtos.Account
         public List<string> Roles { get; set; }
         public int GradoId { get; set; }
         public string UserName { get; set; }
+        public string Section { get; set; }
 
 
 

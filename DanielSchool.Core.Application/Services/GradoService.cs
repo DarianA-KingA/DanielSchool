@@ -27,12 +27,12 @@ namespace DanielSchool.Core.Application.Services
             _httpContextAccessor = httpContextAccessor;
             profesor = _httpContextAccessor.HttpContext.Session.Get<AuthenticationResponse>("user");
         }
-        public async Task<List<GradoViewModel>> ObtenerGradoProfesor()
+        public async Task<List<GradoViewModel>> ObtenerGradoProfesor(AuthenticationResponse teacher)
         {
             var Grades = await base.ObtenerTodos();
-            if (profesor.GradosResponsable != string.Empty)
+            if (teacher.GradosResponsable != string.Empty)
             {
-                List<string> ListaGrados = profesor.GradosResponsable.Split(',').ToList();
+                List<string> ListaGrados = teacher.GradosResponsable.Split(',').ToList();
                 List<GradoViewModel> FiltredList = new List<GradoViewModel>();
                 foreach (string grado in ListaGrados)
                 {

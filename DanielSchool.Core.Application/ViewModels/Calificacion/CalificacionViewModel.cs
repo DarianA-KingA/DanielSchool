@@ -16,6 +16,7 @@ namespace DanielSchool.Core.Application.ViewModels.Calificacion
         public string Nota { get; set; }
         public string Comentarios { get; set; }
         public string StudentUserName { get; set; }
+        public bool Limite { get; set; }
 
     }
 
