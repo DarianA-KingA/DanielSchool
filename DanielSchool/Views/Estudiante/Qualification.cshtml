@@ -45,7 +45,7 @@
                                       @for(int S=1;S<=4; S++)
                                       {
                                           <tr>
-                                                        <td class="p-2 whitespace-nowrap">
+                                            <td class="p-2 whitespace-nowrap">
                                               <div class="flex items-center">
                                                 <div class="font-medium text-gray-800">@Model.Calificacion.Where(Q=>Q.Week == S && Q.Month == M).FirstOrDefault().Meta</div>
                                               </div>
@@ -65,7 +65,7 @@
                                                         <div style="padding-top: 0.1em; padding-bottom: 0.1rem" class="text-xs px-2 bg-green-200 text-pink-800 rounded-full">Logrado</div>
                                                     }
                                                  </div>
-                                              </td>
+                                            </td>
                                             <td class="p-2 whitespace-nowrap">
                                               <div class="text-left">@Model.Calificacion.Where(Q=>Q.Week == S && Q.Month == M).FirstOrDefault().Comentarios</div>
                                             </td>
@@ -87,8 +87,8 @@
         </div>
         <div class="col-span-1">
                 
-            <img src="~/img/ProjectImages/General/blank.jpg"/>
-            <img src="~/img/ProjectImages/General/blank.jpg"/>
+            <img class="w-[550px]" src="~/img/ProjectImages/General/blank.jpg"/>
+            <img class="w-[550px] mt-10" src="~/img/ProjectImages/General/blank.jpg"/>
         </div>
       </div>
-    <script src="~/js/TableCalificacion.js" asp-append-version="true"></script>
+<script src="~/js/TableCalificacion.js" asp-append-version="true"></script>

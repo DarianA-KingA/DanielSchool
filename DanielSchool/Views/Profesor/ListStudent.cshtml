@@ -3,4 +3,72 @@
 @{
     ViewData["Title"] = "Estudiantes";
 }
+<link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel=" stylesheet">
+	<!--Replace with your tailwind.css once created-->
+
+	<!--Regular Datatables CSS-->
+	<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+	<!--Responsive Extension Datatables CSS-->
+	<link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="~/css/TableListStudent.css">
+	<!--Container-->
+	<div class="container w-full md:w-4/5 xl:w-3/5  mx-auto px-2 mt-10">
+
+
+
+		<!--Card-->
+		<div id='recipients' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
+
+
+			<table id="example" class="stripe hover" style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
+				<thead>
+					<tr>
+						<th data-priority="1">Nombre</th>
+						<th data-priority="2">Meta</th>
+						<th data-priority="3">Calificacion</th>
+						<th data-priority="4">Comentario</th>
+						<th data-priority="5">Accion</th>
+					</tr>
+				</thead>
+				<tbody>
+					@if(Model.Count()>0)
+					{
+						foreach(var student in Model)
+						{
+							<tr>
+								<td>@student.Nombre</td>
+								<td>Declarar variable</td>
+								<td>Logrado</td>
+								<td>Felicidades</td>
+								<td><a asp-controller="Profesor" asp-action="EditarNota" asp-route-idStudent="@student.UserName">Editar</a></td>
+							</tr>
+						}
+						
+					}
+					
+
+					<!-- Rest of your data (refer to https://datatables.net/examples/server_side/ for server side processing)-->
+				</tbody>
+
+			</table>
+
+
+		</div>
+		<!--/Card-->
+
+
+	</div>
+	<!--/container-->
+
+
+
+
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+	<!--Datatables -->
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+	<script src="~/js/TableListStudent.js"></script>
 
