@@ -1,0 +1,135 @@
+﻿@using DanielSchool.Core.Application.ViewModels.User;
+@model SaveUserViewModel;
+@{
+    ViewData["Title"] = "Incio de sesion";
+
+}
+<script src="https://unpkg.com/flowbite@1.5.4/dist/datepicker.js"></script>
+<form asp-controller="User" asp-action="Register" method="post" class="min-w-screen min-h-screen flex items-center justify-center px-5 py-5">
+        <div class="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden" style="max-width:1000px">
+            <div class="md:flex w-full">
+                <div class="hidden md:block w-1/2 bg-indigo-500 py-10 px-10">
+                    <img class="h-full" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp" style="border-radius: .25rem;" alt="">
+                </div>
+                <div class="w-full md:w-1/2 py-10 px-5 md:px-10">
+                    <div class="text-center mb-10">
+                        <h1 class="font-bold text-3xl text-gray-900">REGISTER</h1>
+                        <p>Enter student information to register</p>
+                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                        @if (Model.HasError)
+                        {
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <p>@Model.Error</p>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        }
+                    </div>
+                    <div>
+                        <div class="flex -mx-3">
+                            <div class="w-1/2 px-3 mb-5">
+                                <label for="" class="text-xs font-semibold px-1">Nombre</label>
+                                <div class="flex">
+                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                    <input asp-for="FirstName" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="John">
+                                </div>
+                            </div>
+                            <div class="w-1/2 px-3 mb-5">
+                                <label for="" class="text-xs font-semibold px-1">Apellido</label>
+                                <div class="flex">
+                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                    <input asp-for="LastName" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Smith">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex -mx-3">
+                            <div class="w-1/2 px-3 mb-5">
+                                <label for="" class="text-xs font-semibold px-1">Grado</label>
+                                <select asp-for="GradoName" class="block w-full px-4 h-10  text-gray-400 bg-white border border-gray-300 rounded-md focus:border-indigo-500">
+                                    <option>4to</option>
+                                    <option>5to</option>
+                                    <option>6to</option>
+                                    <option>7mo</option>
+                                    <option>8vo</option>
+                                    <option>9no</option>
+                                    <option>10mo</option>
+                                    <option>11vo</option>
+                                    <option>12vo</option>
+
+                                </select>
+                            </div>
+                            <div class="w-1/2 px-3 mb-5">
+                                <label for="" class="text-xs font-semibold px-1">Seccion</label>
+                                <select asp-for="GradoSection" class="block w-full px-4 h-10  text-gray-400 bg-white border border-gray-300 rounded-md focus:border-indigo-500" >
+                                    <option selected >A</option>
+                                    <option>B</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex -mx-3">
+                            <div class="w-1/2 px-3 mb-5">
+                                <label for="" class="text-xs font-semibold px-1">Fecha de nacimiento</label>
+                                <div class="relative">
+                                      <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                            <svg aria-hidden="true" class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                                      </div>
+                                     <input name="BirthDate" datepicker  class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500  block w-full pl-10 p-2.5 " placeholder="Select date">
+                                </div>
+                            </div>
+                            <div class="w-1/2 px-3 mb-5">
+                                <label for="" class="text-xs font-semibold px-1">Genero</label>
+                                <select asp-for="Genero" class="block w-full px-4 h-10  text-gray-400 bg-white border border-gray-300 rounded-md focus:border-indigo-500" >
+                                    <option selected value='M'>Masculino</option>
+                                    <option value='F'>Femenino</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="flex -mx-3">
+                            <div class="w-full px-3 mb-5">
+                                <label for="" class="text-xs font-semibold px-1">Nombre de usuario</label>
+                                <div class="flex">
+                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
+                                    <input  autocomplete="off" asp-for="Username" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="johnsmith@example.com">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex -mx-3">
+                            <div class="w-full px-3 mb-5">
+                                <label for="" class="text-xs font-semibold px-1">Email</label>
+                                <div class="flex">
+                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
+                                    <input asp-for="Email" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="johnsmith@example.com">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex -mx-3">
+                            <div class="w-full px-3 mb-5">
+                                <label for="" class="text-xs font-semibold px-1">Password</label>
+                                <div class="flex">
+                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
+                                    <input asp-for="Password" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="************">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex -mx-3">
+                            <div class="w-full px-3 mb-12">
+                                <label for="" class="text-xs font-semibold px-1">Confirm password</label>
+                                <div class="flex">
+                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
+                                    <input asp-for="ConfirmPassword" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="************">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex -mx-3">
+                            <div class="w-full px-3 mb-5">
+                                <button class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">REGISTER NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>

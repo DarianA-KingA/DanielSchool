@@ -21,7 +21,8 @@ namespace DanielSchool.Infrastructure.Identity.Seeds
             defaultUser.EmailConfirmed = true;
             defaultUser.PhoneNumberConfirmed = true;
             defaultUser.GradoId = 1;
-            defaultUser.Seccion = "A";
+            defaultUser.Genero = 'F';
+            defaultUser.BirthDate = Convert.ToDateTime(DateTime.UtcNow.ToString("d"));  
 
             if (userManager.Users.All(u => u.Id != defaultUser.Id))
             {

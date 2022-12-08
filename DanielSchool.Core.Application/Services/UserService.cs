@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DanielSchool.Core.Application.Dtos.Account;
+using DanielSchool.Core.Application.Enums;
 using DanielSchool.Core.Application.Interfaces.Services;
 using DanielSchool.Core.Application.ViewModels.User;
 using System.Collections.Generic;
@@ -12,11 +13,13 @@ namespace DanielSchool.Core.Application.Services
     {
         private readonly IAccountService _accountService;
         private readonly IMapper _mapper;
+        private readonly IGradoService _gradoService;
 
-        public UserService(IAccountService accountService, IMapper mapper)
+        public UserService(IAccountService accountService, IMapper mapper, IGradoService gradoService)
         {
             _accountService = accountService;
             _mapper = mapper;
+            _gradoService = gradoService;
         }
 
         public async Task<AuthenticationResponse> LoginAsync(LoginViewModel vm)
@@ -30,10 +33,15 @@ namespace DanielSchool.Core.Application.Services
             await _accountService.SignOutAsync();
         }
 
-        public async Task<RegisterResponse> RegisterAsync(SaveUserViewModel vm, string origin)
+        public async Task<RegisterResponse> RegisterAsync(SaveUserViewModel vm)
         {
             RegisterRequest registerRequest = _mapper.Map<RegisterRequest>(vm);
-            return await _accountService.RegisterUserAsync(registerRequest, origin, vm.Rol);
+            vm.Rol = EnumRoles.Estudiante.ToString();
+            var grado = await _gradoService.ObtenerTodos();
+            registerRequest.GradoId = grado.Where(G => G.Name == vm.GradoName && G.Section == vm.GradoSection).FirstOrDefault().Id;
+            var dateSplit = vm.BirthDate.Split('/');
+            registerRequest.BirthDate = dateSplit[1] + "/" + dateSplit[0] + "/" + dateSplit[2];
+            return await _accountService.RegisterUserAsync(registerRequest, vm.Rol);
         }
 
         public async Task<string> ConfirmEmailAsync(string userId, string token)

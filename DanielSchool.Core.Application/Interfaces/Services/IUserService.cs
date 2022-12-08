@@ -11,7 +11,7 @@ namespace DanielSchool.Core.Application.Interfaces.Services
         Task<string> ConfirmEmailAsync(string userId, string token);
         Task<ForgotPasswordResponse> ForgotPasswordAsync(ForgotPasswordViewModel vm, string origin);
         Task<AuthenticationResponse> LoginAsync(LoginViewModel vm);
-        Task<RegisterResponse> RegisterAsync(SaveUserViewModel vm, string origin);
+        Task<RegisterResponse> RegisterAsync(SaveUserViewModel vm);
         Task<ResetPasswordResponse> ResetPasswordAsync(ResetPasswordViewModel vm);
         Task SignOutAsync();
         Task<List<ListStudent>> GetStudentByGradeIdAsync(int GradeId);

@@ -52,6 +52,9 @@ namespace DanielSchool.Core.Application.Mappings
             CreateMap<RegisterRequest, SaveUserViewModel>()
                 .ForMember(x => x.HasError, opt => opt.Ignore())
                 .ForMember(x => x.Error, opt => opt.Ignore())
+                .ForMember(x => x.GradoName, opt => opt.Ignore())
+                .ForMember(x => x.GradoSection, opt => opt.Ignore())
+                .ForMember(x => x.ConfirmPassword, opt => opt.Ignore())
                 .ReverseMap();
 
             CreateMap<ForgotPasswordRequest, ForgotPasswordViewModel>()

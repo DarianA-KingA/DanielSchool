@@ -122,7 +122,7 @@ namespace DanielSchool.Infrastructure.Identity.Service
             await _signInManager.SignOutAsync();
         }
 
-        public async Task<RegisterResponse> RegisterUserAsync(RegisterRequest request, string origin, string rol)
+        public async Task<RegisterResponse> RegisterUserAsync(RegisterRequest request, string rol)
         {
             RegisterResponse response = new()
             {
@@ -150,28 +150,21 @@ namespace DanielSchool.Infrastructure.Identity.Service
                 Email = request.Email,
                 Nombre = request.FirstName,
                 Apellido = request.LastName,
-                UserName = request.UserName
+                UserName = request.UserName,
+                BirthDate = Convert.ToDateTime(request.BirthDate),
+                Genero = request.Genero,
+                GradoId = request.GradoId,
+                EmailConfirmed = true
             };
-
+            
             var result = await _userManager.CreateAsync(user, request.Password);
-            if (result.Succeeded)
-            {
-                await _userManager.AddToRoleAsync(user, rol);
-                var verificationUri = await SendVerificationEmailUri(user, origin);
-                await _emailService.SendAsync(new Core.Application.Dtos.Email.EmailRequest()
-                {
-                    To = user.Email,
-                    Body = $"Please confirm your account visiting this URL {verificationUri}",
-                    Subject = "Confirm registration"
-                });
-            }
-            else
+            if(!result.Succeeded)
             {
                 response.HasError = true;
                 response.Error = $"An error occurred trying to register the user.";
                 return response;
             }
-
+            await _userManager.AddToRoleAsync(user, rol);
             return response;
         }
 

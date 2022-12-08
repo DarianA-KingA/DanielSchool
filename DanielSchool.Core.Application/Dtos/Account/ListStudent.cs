@@ -15,6 +15,8 @@ namespace DanielSchool.Core.Application.Dtos.Account
         public int GradoId { get; set; }
         public string UserName { get; set; }
         public string Section { get; set; }
+        public char Genero { get; set; }
+        public DateTime BirthDate { get; set; }
 
 
 

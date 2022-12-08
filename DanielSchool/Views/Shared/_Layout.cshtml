@@ -28,7 +28,7 @@
     {
        <header class="bg-gray-200 mb-2" style="height:80%;">
 				<nav class="relative px-4 py-4 flex justify-between items-center bg-white-500">
-				<a class="text-3xl font-bold leading-none" href="#">
+				<a class="text-3xl font-bold leading-none" asp-controller="Home" asp-action="Index">
 					<img src="~/img/ProjectImages/Icons/ds.png" class="h-10" alt="logo" viewBox="0 0 10240 10240"/>
 				</a>
 				<div class="lg:hidden">
@@ -114,8 +114,7 @@
 					</div>
 				</nav>
 			</header>
-			<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-			<div class="container">
+			<div class="bg-gray-300">
 				<main role="main" class="">
 					@RenderBody()
 				</main>
@@ -179,6 +178,15 @@
 				  Calificacion
 				</div>
 			  </a>
+		  }
+		  @if(isAdmin)
+		  {
+				<a asp-controller="User" asp-action="Register" class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:outline-none focus:shadow-outline">
+					<div class=" hover:translate-x-2 transition-transform ease-in duration-200" style="width:100%; height: 100%;">
+					  <i class='bx bx-bar-chart-alt-2'></i>
+					  Regitrar nuevo usuario
+					</div>
+				 </a>
 		  }
           <!--Links adicionales-->
           <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">

@@ -33,14 +33,21 @@ namespace DanielSchool.Core.Application.ViewModels.User
         [Required(ErrorMessage = "Debe colocar un correo")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
-
-        [Required(ErrorMessage = "Debe colocar un telefono")]
-        [DataType(DataType.Text)]
         public string Phone { get; set; }
 
         [DataType(DataType.Text)]
         public string Rol { get; set; }
 
+        [Required(ErrorMessage = "Debe colocar un genero")]
+        [DataType(DataType.Text)]
+        public char Genero { get; set; }
+        [Required(ErrorMessage = "Debe colocar su fecha de nacimiento")]
+        [DataType(DataType.Text)]
+        public string BirthDate { get; set; }
+
+        public string GradoName { get; set; }
+        public char GradoSection { get; set; }
+        public int GradoId { get; set; }
         public bool HasError { get; set; }
         public string Error { get; set; }
     }

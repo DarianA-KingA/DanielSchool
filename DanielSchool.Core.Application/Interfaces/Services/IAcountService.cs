@@ -12,7 +12,7 @@ namespace DanielSchool.Core.Application.Interfaces.Services
         Task<AuthenticationResponse> AuthenticateAsync(AuthenticationRequest request);
         Task<string> ConfirmAccountAsync(string userId, string token);
         Task<ForgotPasswordResponse> ForgotPasswordAsync(ForgotPasswordRequest request, string origin);
-        Task<RegisterResponse> RegisterUserAsync(RegisterRequest request, string origin, string rol);
+        Task<RegisterResponse> RegisterUserAsync(RegisterRequest request, string rol);
         Task<ResetPasswordResponse> ResetPasswordAsync(ResetPasswordRequest request);
         Task SignOutAsync();
         Task<List<ListStudent>> GetStudentByGradeId(int idGrade);

@@ -32,11 +32,6 @@ D:\repository\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\ob
 D:\repository\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.dll
 D:\repository\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\ref\DanielSchool.Infrastructure.Persistence.dll
 D:\repository\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.pdb
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.csproj.AssemblyReference.cache
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.GeneratedMSBuildEditorConfig.editorconfig
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.AssemblyInfoInputs.cache
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.AssemblyInfo.cs
-D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.csproj.CoreCompileInputs.cache
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\bin\Debug\net5.0\DanielSchool.Infrastructure.Persistence.deps.json
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\bin\Debug\net5.0\DanielSchool.Infrastructure.Persistence.dll
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\bin\Debug\net5.0\DanielSchool.Infrastructure.Persistence.pdb
@@ -44,6 +39,11 @@ D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\bin\Debug\net5.0\DanielSchool.Core.Domain.dll
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\bin\Debug\net5.0\DanielSchool.Core.Application.pdb
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\bin\Debug\net5.0\DanielSchool.Core.Domain.pdb
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.csproj.AssemblyReference.cache
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.AssemblyInfoInputs.cache
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.AssemblyInfo.cs
+D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.csproj.CoreCompileInputs.cache
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.csproj.CopyComplete
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\DanielSchool.Infrastructure.Persistence.dll
 D:\repositories\C#\Asp.net\DanielSchool\DanielSchool.Infrastructure.Persistence\obj\Debug\net5.0\refint\DanielSchool.Infrastructure.Persistence.dll

@@ -10,8 +10,8 @@
 
 }
 <link rel="stylesheet" href="~/css/TableCalificacion.css">
-<div class="grid grid-cols-3 gap-4 m-4">
-        <div class=" col-span-2 ml-7" >
+<div class="grid lg:grid-cols-3 sm:grid-cols-1 gap-4 lg:m-4">
+        <div class="xl:col-span-2 sm:shrink-0 sm:col-span-1 lg:ml-7 sm:px-10" >
           <div class="w-full  mx-auto">
             <div class="shadow-md">
                 @for(int M = 1; M<=12; M++)
@@ -85,7 +85,7 @@
             </div>
          </div>
         </div>
-        <div class="col-span-1">
+        <div class="lg:col-span-1  sm:shrink-0 sm:col-span-1 sm:mx-0 sm:px-0">
                 
             <img class="w-[550px]" src="~/img/ProjectImages/General/blank.jpg"/>
             <img class="w-[550px] mt-10" src="~/img/ProjectImages/General/blank.jpg"/>

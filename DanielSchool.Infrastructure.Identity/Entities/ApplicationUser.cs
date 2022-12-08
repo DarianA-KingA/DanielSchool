@@ -16,6 +16,8 @@ namespace DanielSchool.Infrastructure.Identity.Entities
         public int GradoId { get; set; }
         public string GradosACargo { get; set; }
         public string Seccion { get; set; }
+        public char Genero { get; set; }
+        public DateTime BirthDate { get; set; }
 
 
     }

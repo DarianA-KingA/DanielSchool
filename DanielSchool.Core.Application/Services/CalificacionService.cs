@@ -104,6 +104,7 @@ namespace DanielSchool.Core.Application.Services
             foreach (var Model in vm)
             {
                 var x = await base.ObtenerPorIdSaveViewModel(Model.Id);
+                x.Meta = Model.Meta;
                 x.Nota = Model.Nota;
                 x.Comentarios = Model.Comentarios;
                 await base.Editar(x, x.Id);

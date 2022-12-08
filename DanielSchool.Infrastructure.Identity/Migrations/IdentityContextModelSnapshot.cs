@@ -31,6 +31,9 @@ namespace DanielSchool.Infrastructure.Identity.Migrations
                     b.Property<string>("Apellido")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("BirthDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -44,6 +47,10 @@ namespace DanielSchool.Infrastructure.Identity.Migrations
 
                     b.Property<string>("FotoUrl")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Genero")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
 
                     b.Property<int>("GradoId")
                         .HasColumnType("int");

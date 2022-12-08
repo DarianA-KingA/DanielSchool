@@ -9,10 +9,9 @@
     string[] meses = {"Agosto","Septiembre","Octubre","Noviembre","Diciembre","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio"};
     string[] Number = {"One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Eleven","Twelve"};
     int index = 0;
-
 }
 <link rel="stylesheet" href="~/css/TableCalificacion.css">
-<div class="grid lg:grid-cols-3 sm:grid-cols-1 gap-4 lg:m-4">
+<form method="post" asp-controller="Profesor" asp-action="EditarNota" class="grid lg:grid-cols-3 sm:grid-cols-1 gap-4 lg:m-4">
         <div class=" xl:col-span-2 sm:shrink-0 sm:col-span-1 lg:ml-7 sm:px-10" >
           <div class="w-full  mx-auto">
             <div class="shadow-md">
@@ -37,42 +36,49 @@
                                         </th>
                                         <th class="p-2 whitespace-nowrap">
                                           <div class="font-semibold text-left">Comentario</div>
-                                        </th>
-                                        <th class="p-2 whitespace-nowrap">
-                                          <div class="font-semibold text-center">Country</div>
-                                        </th>
                                       </tr>
                                     </thead>
                                     <tbody class="text-sm divide-y divide-gray-100">
                                       @for(int S=1;S<=4; S++)
                                       {
+                                          <input type="hidden" asp-for="Calificacion[index].Id"/>
                                           <tr>
                                             <td class="p-2 whitespace-nowrap">
                                               <div class="flex items-center">
-                                                <div class="font-medium text-gray-800">@Model.Calificacion.Where(Q=>Q.Week == S && Q.Month == M).FirstOrDefault().Meta</div>
+                                                <div class="font-medium text-gray-800">
+                                                     <input asp-for="Calificacion[index].Meta" autocomplete="off" type="text" class="peer placeholder-transparent h-10 border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" />
+                                                </div>
                                               </div>
                                             </td>
                                             <td class="p-2 whitespace-nowrap">
                                                 <div class="flex space-x-2">
-                                                    @if(@Model.Calificacion.Where(Q=>Q.Week == S && Q.Month == M).FirstOrDefault().Nota.Equals(EnumCalificacion.Iniciado.ToString()))
-                                                    {
-                                                        <div style="padding-top: 0.1em; padding-bottom: 0.1rem" class="text-xs px-2 bg-gray-200 text-pink-800 rounded-full">Iniciado</div>
-                                                    }
-                                                    else if(Model.Calificacion.Where(Q=>Q.Week == S && Q.Month ==M).FirstOrDefault().Nota.Equals(EnumCalificacion.EnProceso.ToString()))
-                                                    {
-                                                        <div style="padding-top: 0.1em; padding-bottom: 0.1rem" class="text-xs px-2 bg-orange-200 text-pink-800 rounded-full">En proceso</div>
-                                                    }
-                                                    else
-                                                    {
-                                                        <div style="padding-top: 0.1em; padding-bottom: 0.1rem" class="text-xs px-2 bg-green-200 text-pink-800 rounded-full">Logrado</div>
-                                                    }
+                                                    <select  asp-for="Calificacion[index].Nota">
+                                                        @if(Model.Calificacion[index].Nota.Equals(EnumCalificacion.Iniciado.ToString()))
+                                                        {
+                                                            <option selected >Iniciado</option>
+                                                            <option value="@EnumCalificacion.EnProceso.ToString()">En proceso</option>
+                                                            <option>Logrado</option>
+                                                        }
+                                                        @if(Model.Calificacion[index].Nota.Equals(EnumCalificacion.EnProceso.ToString()))
+                                                        {
+                                                            <option >Iniciado</option>
+                                                            <option selected value="@EnumCalificacion.EnProceso.ToString()">En proceso</option>
+                                                            <option>Logrado</option>
+                                                        }
+                                                        @if(Model.Calificacion[index].Nota.Equals(EnumCalificacion.Logrado.ToString()))
+                                                        {
+                                                            <option >Iniciado</option>
+                                                            <option value="@EnumCalificacion.EnProceso.ToString()">En proceso</option>
+                                                            <option selected>Logrado</option>
+                                                        }
+                                                        
+                                                    </select>
                                                  </div>
                                             </td>
-                                            <td class="p-2 whitespace-nowrap">
-                                              <div class="text-left">@Model.Calificacion.Where(Q=>Q.Week == S && Q.Month == M).FirstOrDefault().Comentarios</div>
-                                            </td>
-                                            <td class="p-2 whitespace-nowrap">
-                                              <div class="text-lg text-center">🇺🇸</div>
+                                            <td class="p-0 mr-0 w-[30px] whitespace-nowrap">
+                                              <div class="text-left">
+                                                  <input asp-for="Calificacion[index].Comentarios" autocomplete="off" type="text" class="peer placeholder-transparent h-10 border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" />
+                                              </div>
                                             </td>
                                           </tr>
                                           index++;
@@ -86,6 +92,15 @@
                      </div>
                 } 
             </div>
+            <div class="grid lg:grid-cols-2 mt-4">
+                <div class="sm:col-span-1" style="align-content:center; text-align:center;"> 
+                    <a href="#" class="bg-rose-500 text-white rounded-md px-2 py-1">Cancel</a>
+                </div>
+                <div class="sm:col-span-1" style="align-content:center; text-align:center;"> 
+                    <input asp-for="StudentId" type="hidden" />
+                    <button type="submit" class="bg-blue-500 text-white rounded-md px-2 py-1">Submit</button>
+                </div>
+            </div>
          </div>
         </div>
         <div class="lg:col-span-1  sm:shrink-0 sm:col-span-1 sm:mx-0 sm:px-0">
@@ -93,5 +108,7 @@
             <img class="w-[550px]" src="~/img/ProjectImages/General/blank.jpg"/>
             <img class="w-[550px] mt-10" src="~/img/ProjectImages/General/blank.jpg"/>
         </div>
-      </div>
-<script src="~/js/TableCalificacion.js" asp-append-version="true"></script>
+</form>
+<script src="~/js/TableCalificacion.js"></script>
+
+

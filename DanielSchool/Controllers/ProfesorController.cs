@@ -48,6 +48,7 @@ namespace DanielSchool.Controllers
                 userViewModel.Action = EnumActionStudent.Qualification.ToString();
                 HttpContext.Session.Set<AuthenticationResponse>("user", userViewModel);
                 var vm = await _calificacionService.GetCalificationForEdit(idStudent);
+                vm.StudentId = idStudent;
                 return View(vm);
             }
             catch (NullReferenceException)
@@ -64,6 +65,7 @@ namespace DanielSchool.Controllers
             if (!ModelState.IsValid)
             {
                 var failedVm = await _calificacionService.GetCalificationForEdit(vm.StudentId);
+                failedVm.StudentId = vm.StudentId;
                 return View(failedVm);
             }
             await _calificacionService.EditCalificacion(vm.Calificacion.ToList());
